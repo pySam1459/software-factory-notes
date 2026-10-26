@@ -24,7 +24,9 @@ Compiled 2026-10-26 by Chief (Sam's Grok Bot).
 | [tests.md](tests.md) | Expect/inline snapshot tests, fake timers and network, catching tests that have been gamed |
 | [hooks-and-scripts.md](hooks-and-scripts.md) | Copilot `preToolUse` hooks, git pre-commit, Azure Pipelines PR checks, and the scripts in `scripts/` |
 | [agent-config-hygiene.md](agent-config-hygiene.md) | Keeping instructions and skills few and focused, layering, auditing, pruning, picking one browser tool |
+| [traits.md](traits.md) | Trait-driven development (traits.sh): small Markdown rules for judgement calls, checked by a model, and when to use them instead of lint or types |
 | [copilot-skills/correct/SKILL.md](copilot-skills/correct/SKILL.md) | `/correct` adapted for Copilot and ADO |
+| [copilot-skills/check-traits/SKILL.md](copilot-skills/check-traits/SKILL.md) | Draft read-only skill: review the diff against `.agents/traits/` |
 
 ## Working files
 
@@ -44,6 +46,7 @@ examples/
   azure-pipelines/pr-checks.yml
   copilot/agent-guard.json         goes in .github/hooks/
   copilot/my-area.instructions.md  goes in .github/instructions/
+  traits/                          example traits for a Python + TS project, go in .agents/traits/
 ```
 
 Run the script tests with `node --test scripts/`. These need Node 20+ and git, with no dependencies. The ESLint example was checked with ESLint 9.39, typescript-eslint 8 and @vitest/eslint-plugin. Run the rule test with `node examples/eslint-rules/no-comments.test.mjs` from a project that has `eslint` installed.
