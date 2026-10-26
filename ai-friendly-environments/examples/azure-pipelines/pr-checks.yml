@@ -1,0 +1,30 @@
+trigger: none
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  SCOPE: src/features/my-area
+
+steps:
+  - checkout: self
+    fetchDepth: 0
+
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '20.x'
+
+  - script: npm ci
+    displayName: Install
+
+  - script: node scripts/check-agent-gaming.mjs --scope "$(SCOPE)" --format azure
+    displayName: No deleted tests, .skip/.only or new suppressions
+
+  - script: npx eslint "$(SCOPE)" --max-warnings=0
+    displayName: Lint (owned folders, suppressions baseline applies)
+
+  - script: npx tsc -p tsconfig.json --noEmit
+    displayName: Type check
+
+  - script: npx vitest run "$(SCOPE)" --allowOnly=false
+    displayName: Tests

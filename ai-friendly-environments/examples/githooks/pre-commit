@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+
+node scripts/check-agent-gaming.mjs --staged --scope src/features/my-area
+
+files=$(git diff --cached --name-only --diff-filter=ACMR -- 'src/features/my-area/*.ts' 'src/features/my-area/*.tsx')
+if [ -n "$files" ]; then
+  npx --no-install eslint --max-warnings=0 $files
+fi

@@ -1,0 +1,472 @@
+
+Search transcript
+
+Chapter 1: Introduction and background
+0:000  Everyone, I am Lauren Lauren Tan. I guess not many people know my last name.
+0:055  Uh, I am Potato on Twitter. Uh, potato with spelled with an E. Um, and I have
+0:1313  been at Cursor for about 5 months. Uh, previously I was at Meta where I worked
+0:2020  on the React team. Uh, specifically working on the React compiler, uh, which was a whole lot of fun. Uh I'm still on
+0:2727  the on the core team and and uh contributing to open source here and there. Uh so that that's really nice that they still let me do that. Uh and
+0:3636  before Meta, I was at Netflix uh where I was uh both a tech lead and uh I
+0:4343  transitioned to be be an engineering manager um for about two years. So I've had a I've have had a lot of experience
+0:5252  going between engineering management and being an individual contributor. Uh and I think something I've noticed actually
+0:5959  which is quite interesting is that there are so many parallels with you know management skills and how to like manage
+1:061 minute, 6  agents. Uh and that's actually a big part about what I wanted to chat with you and everybody else about today. Um
+1:141 minute, 14  but yeah that's that's me. Uh I do have some like very light slides but uh it's not going to be uh just rambling. So let
+1:231 minute, 23  me just share my screen and hope that I don't leak anything. Uh
+1:331 minute, 33  oh no I need to allow permissions.
+1:361 minute, 36  No worries. Take your time. There's always tech tech trouble. Uh give me one second to rejoin.
+1:421 minute, 42  Yeah, go for it.
+1:461 minute, 46  I see many of you already know Lauren from from the looks of the chat here.
+1:501 minute, 50  Um, so yeah, it's exciting to to get a chance to chat with her uh and and go through some of her her recent work. As you guys heard, you know, a lot of
+1:581 minute, 58  recent experience from from Netflix to to Meta and then now over at Cursor. Uh, we're going to chat a little bit about
+2:052 minutes, 5  Grockbot as well. So, uh, that'll be exciting. I don't know if you guys saw that was a recent release. I think literally maybe yesterday or the day before uh from the cursor team which is
+2:142 minutes, 14  kind of like um let's call it like agents for everyone. You can go check it out if you want and learn a little bit more about the product but um but yeah
+2:222 minutes, 22  we'll we'll explore that a little bit today as well. All righty. Welcome back.
+2:402 minutes, 40  And Lauren, you're just on mute there if uh you want to hop off of mute if you're chatting. Yeah, sorry. No worries.
+2:472 minutes, 47  It's 2026 and I still don't know how to use Zoom. [laughter] That's all good.
+2:512 minutes, 51  Uh okay, so I assume you can see my screen.
+2:542 minutes, 54  Yes. Yeah, we're good. Um, so yeah, today, yeah, I think I think the big theme for me as I've been using agents to write code, and I'm sure a lot of you
+Chapter 2: The trust curve in agent coding
+3:033 minutes, 3  have had the same experience as well, is how do you trust it? You know, especially if you are an engineer that's
+3:103 minutes, 10  been writing code for a very long time, you have a lot of opinions and lessons that you've learned about doing good
+3:173 minutes, 17  engineering. And when you see agents just, you know, winging it and, you know, guessing, hallucinating,
+3:243 minutes, 24  uh, you know, confidently stating that they found the smoking gun, uh, for the hundth time, uh, but it's actually not
+3:323 minutes, 32  the real problem. You lose a lot of trust. And when you lose when you don't have much trust in your agents,
+3:393 minutes, 39  I feel like you you really can't get the most out of them. And for me, the parallel is like with management. Uh so
+3:463 minutes, 46  if I'm an a manager an engineering manager of a team and I have a bunch of you know I have a team of engineers uh
+3:543 minutes, 54  on my team and I don't trust them then the mode of operation I'm going to be in is going to be like micromanagement
+4:004 minutesright I'll have to spend a lot of time looking over my reports shoulders and checking that they're doing their work
+4:084 minutes, 8  well you know that they're not shipping bugs to production and so I drew this chart cuz uh it's not
+4:164 minutes, 16  it's not a very scientific chart but like this is how I imagine myself and my journey through using agents. So you
+4:254 minutes, 25  know like fast forward or back forward uh or fast back uh fast backwards like a
+4:334 minutes, 33  year or so when you know nobody was or not many people were using agents to code. Uh I think you
+4:414 minutes, 41  uh you know get into this mode where you are in very heavily in the loop with one or
+4:484 minutes, 48  several like a handful of agents and you find yourself just constantly fig uh you know trying to understand what your
+4:554 minutes, 55  agents are doing uh and you're very very in the loop. You're watching every single output. you are sitting there
+5:015 minutes, 1 secondprompting um and you really can't parallelize beyond that because you don't again you don't have that trust
+5:095 minutes, 9  right you can't go to a 100 agents uh like spawn 100 agents when you don't even trust the output of one agent
+5:175 minutes, 17  so over the past 5 months I feel like I've really been able to uh like ascend this trust curve and now I'm at the
+5:265 minutes, 26  point where uh I actually have this Sounds kind of scary to say this and it it makes me sound like a slop artist, but I I promise I'm not, but I actually
+5:355 minutes, 35  have my agents now um automerging PRs for me. Uh which is like a wild thing to say, but um like I woke up today and
+5:445 minutes, 44  there were like 20 PRs landed and I just reviewed them on Maine like they were already landed and they were good. Uh so
+5:525 minutes, 52  how did I get to that point is basically what I wanted to talk about today.
+5:585 minutes, 58  Uh, and again like yeah, feel free to jump in if you have questions, Colin.
+6:026 minutes, 2  Um, but uh, oh yeah, of course I got to show this this chart. Uh, where uh,
+6:126 minutes, 12  no do not trust to someone requested to control my computer. Uh, probably won't do that. Uh but yeah, so this chart I
+6:226 minutes, 22  think I I'm sharing this chart not to kind of like flex but to kind of show like the journey like so you can see like the curve like it sort of like
+6:316 minutes, 31  inversely matches the contributions I've been able to land at cursor. So I joined five months ago and five months ago like
+6:396 minutes, 39  I you know my first month I was like not very productive because I was ob you know I was learning the codebase didn't know what the heck was going on and as I
+6:486 minutes, 48  got more confident in in my agents uh I've really been able to kind of ramp up my productivity. Uh and again like yeah
+6:566 minutes, 56  like last month I shipped a thousand PRs which is ridiculous. Uh, and then this month we're only on the 12th. I'm already at like almost 800 PRs landed.
+7:097 minutes, 9  Uh, so the velocity is definitely high and you you I'm sure a lot of you will definitely be questioning like how how
+7:167 minutes, 16  much of this code is actually good. Um, and I think yeah, like that's definitely fair to question.
+7:237 minutes, 23  Um, but uh, yeah, I think I think if you set up your agents well, you can definitely get to a very similar level.
+7:347 minutes, 34  Um, and so I'm going to talk about how we do that.
+Chapter 3: The role of verification skills
+7:387 minutes, 38  Uh so for me I think I'm curious like I guess call in your experience as well but uh for me I think the most important
+7:487 minutes, 48  skill that you should have in your toolbox when you work with agents is verification.
+7:557 minutes, 55  Uh and by verification I mean the ability for an agent to actually run the code uh or take CPU traces or heap
+8:058 minutes, 5  snapshots or uh you know open an iOS simulator whatever you know however your
+8:128 minutes, 12  application is exposed to your users it can do the same thing and uh run it for
+8:198 minutes, 19  real and actually test and verify it don't work because that's the thing that really closes the loop. Uh it doesn't
+8:268 minutes, 26  guarantee your agent writes good code uh but it allows them to at least write correct code uh which is a big a really
+8:348 minutes, 34  big step forward for being able to trust your agents. Um I will I can share one example that we
+8:438 minutes, 43  have uh within cursor. Uh oops where let me open this.
+9:009 minutesLet's make this uh make me full screen. There you go.
+9:059 minutes, 5  Uh so for the for cursor's agent window uh so this is actually an interesting
+9:119 minutes, 11  story but uh when I joined cursor 5 months ago uh they're actually uh well I was supposed to join a different team I
+9:209 minutes, 20  was supposed to join like the cloud agents team uh but then since I have a lot of experience working on react and
+9:269 minutes, 26  agents window is a react application uh I was uh I was asked to basically help out
+9:349 minutes, 34  with uh the agent window work. Uh but um there wasn't really a lot of like skills
+9:439 minutes, 43  to help me. So I just found myself like okay uh agent window is going to launch in like a week, right? we have a really
+9:499 minutes, 49  tight deadline and um there was uh you know I was just sitting there like okay I'm going to open up the performant the
+9:579 minutes, 57  the Chrome dev tools and just like take a trace look at it myself and try to make sense of this flame graph and keep in mind I was just like in my first week
+10:0510 minutes, 5  so I had no idea what I was looking at no idea what you know I mean I had some idea but you know the codebase was completely fresh to me uh and I realized
+10:1410 minutes, 14  like my agent had no idea either you know like I would take a screenshot of the tree. I would download trades. I would send it to it and it be like, "Yeah, it kind of looks like this, you
+10:2310 minutes, 23  know, uh, and it would like confidently state like it's this thing." And then I'd try to fix that. And turns out that's not the actual thing.
+10:3210 minutes, 32  So, this was very very slow process. And if you've ever done any like performance work yourself or, you know, just even development with an agent where you
+10:4010 minutes, 40  don't have a verification skill, you are the verifier, right? You you're the bottleneck. you you you tell your agent
+10:4710 minutes, 47  to do something and then it goes off and write some code. Then you open up your you know local dev build and then you start to say oh you know doesn't work.
+10:5410 minutes, 54  Then you got to copy paste screen uh you know screenshots or console errors or whatever. Uh and then your agent like
+11:0111 minutes, 1  lowly kind of like uh you know works with that and then tries to understand it and um fix the thing but then you're
+11:1011 minutes, 10  constantly just in the loop and and being a bottleneck. So there's really no way to parallelize. So the control glass skills are like one of the first skills
+11:1811 minutes, 18  I built uh for cursor. Uh and glass by the way is the code name for agents window that we use internally but it's
+11:2611 minutes, 26  just cursor I guess. Um and so this skill uh is I guess the the the code
+11:3311 minutes, 33  itself is not super interesting. Your agent can very easily make one for you.
+11:3711 minutes, 37  uh where if if you're building an Electron app or a web app or even iOS uh applications uh you can teach your agent
+11:4611 minutes, 46  how to use like the ChromeDev tools protocol or through uh Apple has some utilities as well for running the
+11:5411 minutes, 54  simulator and taking traces and controlling programmatic control as well. Uh so that's really useful. Uh but
+12:0312 minutes, 3  one thing I want to talk about is uh the this thing
+12:1012 minutes, 10  uh where is the read me? Uh so this skill comes with this very unique feature called or not feature uh unique
+12:1912 minutes, 19  file called a feature map. And so the story then is like I built this skill and so now the agent was able to uh
+12:2812 minutes, 28  actually run the agent window and take traces and whatnot. Uh but it had no
+12:3312 minutes, 33  idea what what the agents window was. So um you know like someone would say like
+12:4012 minutes, 40  oh the the left sidebar is like laggy or something like that or you know the right side the the PR tab is not working
+12:4812 minutes, 48  and the agent would just be like kind of flailing around. It would spend a lot of time trying to like look up the code and you know where is this feature? How do I actually get to it on the UI which made
+12:5812 minutes, 58  it basically completely useless. uh you know like we would I would run this skill locally and you know it would
+13:0513 minutes, 5  spawn a dev build uh but then it' just be churning like I just try to click here it wouldn't know how to get to
+13:1313 minutes, 13  things um and it was just an awful experience uh so is putting arrows on my
+13:2013 minutes, 20  screen um so uh yeah this this feature map has been really useful uh because it
+13:2713 minutes, 27  teaches the agent how to get to all of the features that you have. Um, and in PAC, the plugin that I I've made, uh, if
+13:3613 minutes, 36  you search for PAC cursor on Google, you you'll find it. Uh, but there is a create verification skill in that plugin
+13:4413 minutes, 44  where it actually helps you set up something like this for yourself. Um, including the feature map. So, it will actually explore the code and build up
+13:5213 minutes, 52  this initial feature map that tells your agent how to get to all of the different features that you have. Uh and this is
+13:5913 minutes, 59  extremely powerful because now like you have these user reports that come in uh you you can actually map even like a
+14:0714 minutes, 7  vague report or even a screenshot. So we have this uh internally at cursor where uh we have a slack channel with you know
+14:1614 minutes, 16  lots of people giving us feedback on the agents window and rockbot and whatnot.
+14:2114 minutes, 21  Uh, and often times the report is very bad like very low quality like someone will just put very often we get like a
+14:2914 minutes, 29  screenshot like and then someone just says question mark question mark question mark like what is this and you know like without this your agent is
+14:3614 minutes, 36  like I have no clue right but with a feature map like this it has a lot more context and understanding of how to
+14:4514 minutes, 45  actually navigate how to get to all the different features. Uh so like you know example like I guess like the sidebar like what is the sidebar uh you know
+14:5414 minutes, 54  like all the different sub features that are present in it um like from the user point of view here's where how do I get
+15:0115 minutes, 1 secondto it all the different keyboard shortcuts uh even like the the what do you call it the DOM elements or yeah like the
+15:1015 minutes, 10  attributes that you use for selecting things through the CDP uh are all there.
+15:1615 minutes, 16  So uh again yeah this is like really really powerful uh for for agents uh and pstack ships uh that create
+15:2615 minutes, 26  verification skill but also a maintain verification skill uh so you can keep this up to date.
+15:3215 minutes, 32  Cool. Yeah, I was just going to ask how you created that. So do you mind sharing a little bit more about um that that process in the context of Pstack and maybe just what Pstack is for the folks who aren't familiar?
+Chapter 4: Pstack and managing agent behavior
+15:4215 minutes, 42  Yeah. So, P stack is pretty interesting because uh well, first of all, the name is kind of goofy. like the P the P and P
+15:5015 minutes, 50  sack is like potato potato snack because I um so uh uh there is a pretty uh
+16:0016 minutesfamous person Gary Tan who is the CEO of Y Combinator and he's come up with this plugin called Gstack uh Gary Stack and
+16:1016 minutes, 10  uh funnily enough we share the last name we have no relations uh but I thought it would be funny to kind of you know poke
+16:1616 minutes, 16  fun at Gary and make peace stack my version of of of of [laughter] his plugin. Uh but kind of tailor it to my own set of p engineering practices.
+16:2916 minutes, 29  Uh but I honestly actually never set out to build PAC. Uh it just started with a bunch of skills, right? Like I started with that control glass skill and then I
+16:3716 minutes, 37  started with another skill like called how which I also noticed through like observing agents. Um, so like you know
+16:4616 minutes, 46  in the early days of me, you know, trying to climb this ladder, I was like super in the loop and I was basically nitpicking my agents to an extreme
+16:5316 minutes, 53  degree. I was like I would tell it um, you know, this feature has stopped working. Here's a bug report. Like why isn't it working?
+17:0417 minutes, 4  And very often the agent would just like confidently state like, "Oh, it has to be this, right? It has to be this thing." And I noticed like when I looked
+17:1217 minutes, 12  at the actual tool calls, I noticed it wasn't actually reading the code that I thought should be affected. And that
+17:2017 minutes, 20  made me just extremely suspicious. And at that point, I was like, I'm not going to I can't trust any this agent anymore cuz it's just it's just completely
+17:2717 minutes, 27  hallucinating. And I think I think it's very easy to just you know like build up that distrust and not and
+17:3617 minutes, 36  kind of feel helpless like you know you don't know how to help your agents succeed. But like again I think the the
+17:4317 minutes, 43  the management analogy is super helpful because like imagine if you were a manager of an engineering team and you had an engineer on your team who was a
+17:5217 minutes, 52  really good coder. No business context whatsoever. you know they they just you just hired them and they they onboarded
+17:5817 minutes, 58  you know like five   ago. Uh and so how do you actually teach that person to be effective? So how you do that is
+18:0618 minutes, 6  through a skill. uh a skill being just you know it's just markdown right but you know it encodes a lot of information
+18:1318 minutes, 13  instructions a lot of uh you can really draw out a lot of intelligence from an
+18:2018 minutes, 20  agent by well some people on Twitter call it like you know pull the agent to a different latent space which is kind of like a fancy way of just saying like
+18:2918 minutes, 29  since uh you LLMs are sort of like they predict the next token uh when you give it some high quality tokens uh to to
+18:3718 minutes, 37  begin with then you know it it can kind of pattern match on like a higher space that's you know smarter
+18:4518 minutes, 45  um so that's like a very interesting model there but yeah I built Pstack very very incrementally uh so uh started with
+18:5418 minutes, 54  just really observing how agents you know all the fail different failure modes of of that agents were having and every time I saw that I just okay I'm
+19:0219 minutes, 2  just going to make that a skill right like stop hallucinating actually go and search up, look up the code, use a lot
+19:0919 minutes, 9  of sub agents, uh, and yeah, stop guessing.
+19:1619 minutes, 16  Yeah, that makes sense. One, one kind of followup question here, uh, both from myself and from a bunch of people in the chat. So, I guess it's two two parts. So, one is like how do you maintain these skills?
+19:2519 minutes, 25  So, like the product changes over time.
+19:2719 minutes, 27  Obviously, there's a lot of people who are shipping against the codebase. So, how do these skills get maintained? Uh and then second to that is like how do you know when your verification is is
+19:3519 minutes, 35  good enough? Uh like and you know you can trust that the ver verification loops that you've built are going to I guess you trust that the outputs uh when they're done.
+Chapter 5: Evaluation and iterative maintenance
+19:4719 minutes, 47  Uh yeah maybe I'll talk about um I think there are some related maybe I'll start with this one first. So like how do I maintain these skills?
+19:5919 minutes, 59  So, um, if you're not familiar with this concept, an eval [clears throat] is essentially like a way to, uh, well, I
+20:0620 minutes, 6  the mental model I have is like it's like a unit test for an agent. Um, and, uh, you can actually make your own evals. You don't need like a special
+20:1520 minutes, 15  framework for them. You can build you can you can build one depending on like, you know, how scientific and how
+20:2220 minutes, 22  rigorous you want to be. Uh, my screen is red.
+20:2620 minutes, 26  Yeah, there's a little button. Um, sorry. Do you mind like disabling the drawing or something? I I can't see my screen.
+20:3320 minutes, 33  Yeah, sorry. If you guys could not draw on the screen, that'd be great. But, um, there's a little button in the troll. Yeah, the little drop down.
+20:4220 minutes, 42  How do I clear? Yeah, you got it. Perfect.
+20:4920 minutes, 49  Yeah. So, eval test your skills basically. And actually in Pstack we ship uh under potato mode
+20:5920 minutes, 59  there's a playbook if you search for it called eval playbook. Um and it's uh uh it's like not it's actually pretty
+21:0721 minutes, 7  pretty rigorous the way it's done. Uh but um essentially what I do is I spawn a lot of different sub agents. I have
+21:1521 minutes, 15  like my main coordinator agent uh come up with a rubric for uh what I want the
+21:2221 minutes, 22  skill to do. Um, and then it spawns all these sub aents and it's it creates individual directories for them, uh,
+21:3121 minutes, 31  which are cleverly named to not let the sub agent know that it's being evaluated because, uh, agents can actually tell
+21:4021 minutes, 40  and when they do, they change their behavior. Uh, but it does a bunch of stuff like that to um essentially yeah
+21:4821 minutes, 48  like test whether or not the skill I'm making or changing is actually doing what I think it does. Um, and one of the
+21:5521 minutes, 55  really nice things about cursor is that we are we we support so many different models. So you can actually eval your skill across all sorts of different
+22:0422 minutes, 4  models um and you know get a sense of how well it performs across that different matrix. um especially for the models that you use.
+22:1522 minutes, 15  Uh so I do this a lot. Every time I I modify a skill, I will run one of these uh like the EBAL playbook uh and make
+22:2222 minutes, 22  sure that you know it's actually leading to a result I want. Uh but I will say like
+22:2922 minutes, 29  maintaining skills is actually pretty hard. Uh it requires I think a lot of taste and observation. So, you kind of
+22:3722 minutes, 37  need to be very good at being a backseat driver, you know what I mean? Like if you do pair, if you ever done pair programming, for example, uh, and you
+22:4622 minutes, 46  watch a co-orker code and you just like you, you could probably do this better, you know, you could do, you know, like why did you not do this, right? You you ask a lot of questions to your coworker.
+22:5522 minutes, 55  And it's kind of a similar thing here.
+22:5622 minutes, 56  You like you don't want to just be a passive observer of your agent. You want to be very in the driver seat in the initial stages when you're building up
+23:0423 minutes, 4  your own set of skills. uh you know obviously you can use something like PAC but if you're building your own set of skills it's very I think you know
+23:1323 minutes, 13  opening up the all the tool calls and like reading the code and reading all the uh the agent behavior and their
+23:2023 minutes, 20  thinking blocks is a really great way to see where they they fail right like what what you know where are they being done
+23:2923 minutes, 29  and then you can go and build a skill for that and then with verification how you trust it is it's I think it's also a
+23:3623 minutes, 36  very similar iteration loop uh where you know like I actually did the same process for verifying the verification
+23:4323 minutes, 43  skill where I actually get um so one thing that's interesting about eval is that you can sort of hill climb them
+23:5123 minutes, 51  meaning that uh your eval can produce a score right uh a score that you can get your coordinator to produce uh but also
+24:0024 minutescomp uh you can have a judge agent of a different model to uh kind cross reference and make sure that the first
+24:0824 minutes, 8  model is not being biased, right? The model that's judging all of the sub aents that are running the thing. Uh but you can also like hill climb. So meaning
+24:1624 minutes, 16  that you can you can use like /loop in cursor and you can say okay keep looping on this eval right until everything is
+24:2524 minutes, 25  10 out of 10 as an example. Uh and I did the same the basically the same approach with the control skill. And so I kind of it was very it was very hands-off
+24:3324 minutes, 33  actually. Uh so you know I uh I kind of built I built that skill that way like the CLI in that skill. Um and over time
+24:4324 minutes, 43  it's gotten really good. Uh but yeah it was definitely not super smooth at the beginning. It required a lot of
+24:5024 minutes, 50  iteration and I think there's an analogy here for me which is um well I make this
+24:5724 minutes, 57  analogy later in a different slide on my drawing here. Uh but I think of it like
+25:0325 minutes, 3  uh you know as a as a engineer now you're sort of more like you uh like maybe a manager or the analogy I like is
+25:1225 minutes, 12  like you're like a a chef in a restaurant. Uh you you're the head chef.
+25:1725 minutes, 17  Uh you're not cooking all the food yourself anymore. You have a team of cooks, right? You have line cooks, you have a sue chef, you have, you know, all these different stations.
+25:2625 minutes, 26  Um and it's your job to really design the environment. you know, you you're in charge of setting up the kitchen. You're in charge of, you know, like giving
+25:3525 minutes, 35  tasks to different people. So, um yeah, it's a very interesting way of
+25:4225 minutes, 42  working. Uh but yeah, that's that's how I've basically built uh these verification skills.
+Chapter 6: Scaling from local to cloud agents
+25:4825 minutes, 48  Yeah, just just one followup there on like to go try to go one layer deeper.
+25:5225 minutes, 52  So, are you let's say we wanted to build um an eval or a skill for for something and we wanted to kind of get better on
+26:0126 minutes, 1 secondits own, which is is what I think you're suggesting. Uh are you doing that in like a work tree kind of isolated with like the sub agents and and then the
+26:0926 minutes, 9  reviewer agent and and all that? Is it happening like in some type of cloud hosted environment? Like what's the the more the practical steps? If I wanted to
+26:1726 minutes, 17  go do this uh and like set up a verification system for something, what would I what would I do or where would I start?
+26:2426 minutes, 24  Um I think that uh the best place to start is local because you can observe you can definitely observe what your
+26:3226 minutes, 32  agents are doing. So, uh, if you're building a verification skill for yourself, uh, I would definitely start local and just have your agent bring up
+26:4026 minutes, 40  the application, whether it's like a CLI or, uh, desktop app or whatever. And so, you can actually observe, right? You can
+26:4726 minutes, 47  see how the agent is interacting with the the application. You can see it, you know, how it calls like the different
+26:5626 minutes, 56  APIs that that allow it to interact with the uh the application.
+27:0227 minutes, 2  Um but uh for me personally uh I have basically been kind of all in mostly all in on cloud agents because they're
+27:1027 minutes, 10  extremely powerful. Uh and the really powerful thing about cursor is the the cloud agents actually where if you spend
+27:1827 minutes, 18  a little bit of time setting up your environment these control skills these verification skills pay a huge amount of dividends
+27:2627 minutes, 26  because it's not just something that makes you as a single engineer better.
+27:3127 minutes, 31  It actually levels up your whole team uh and even your whole company because uh you can actually start thinking about cloud agents. start thinking about
+27:3927 minutes, 39  automations that automatically do things like uh I I get I I kind of talk about
+27:4627 minutes, 46  this a bit later, but I'll just kind of get into it. Uh where where you know, for example, like I talk a lot about this agent we have called Benny, right?
+27:5527 minutes, 55  who who uh you know takes all of the bug reports that we get and it automatically goes off in the cloud, opens up a cloud
+28:0428 minutes, 4  uh it's you know its desktop. It runs cursor in its own computer and it uses the same control skills to interact with
+28:1328 minutes, 13  the application and try to reproduce the bug uh or the user report, right? And this is so so powerful because at once I
+28:2028 minutes, 20  can immediately I I get so much information from this automatically like here in this example you can see that uh the Benny actually reproduced the bug uh
+28:3028 minutes, 30  but it's already fixed on main. So it actually confirms that we fixed this problem already and all I need to do is just release another build of of cursor.
+28:4028 minutes, 40  Uh, so that's like huge information there that I didn't have to go off and sit with an agent, you know, and spend an hour trying to figure like is this
+28:4728 minutes, 47  fixed, is this not fixed. So you you you gain back so much time. Uh, but you know, everybody on my team benefits from
+28:5428 minutes, 54  this. Everybody at the company benefits from this. Uh, so definitely think that uh, you know, keeping these uh, using
+29:0329 minutes, 3  cloud agents is super powerful. Uh, but yeah, it's like a journey. You have to trust it first, right? before you you
+29:1029 minutes, 10  get to this point. And that's it goes back to what I was saying here where, you know, it's very hard. It's almost impossible. And I would definitely
+29:1829 minutes, 18  encourage you not to try to jump from, you know, like if you're still in this zone, you don't want to jump to like I'm
+29:2529 minutes, 25  going to spawn a hundred of thousand or thousands of cloud agents right now because you're just going to waste a lot of tokens. Um, and it's going to be extremely expensive.
+29:3529 minutes, 35  Yeah. So just to kind of recap so far, basically the if we wanted to go on the journey that you've kind of gone on, it would be to start with verification,
+29:4329 minutes, 43  building some some skills and some some ways of determining that the agents are producing at least like correct code.
+29:5029 minutes, 50  Whether like you said whether it's good code or not is maybe a separate question, but like it's it's technically solving the problem by looking at you know stack traces, looking at you know
+29:5729 minutes, 57  the the actual behavior in the app and so on. Um, and then once we trust it locally, then we can start to think about scaling into the cloud and running
+30:0530 minutes, 5  more agents that are picking up signals, I guess, on their own, right? So whether that's like a bug report that comes in or something, they can go and pick it up and solve the problem and and give us
+30:1430 minutes, 14  back a PR. And then maybe the last step is like automerging the PRs, which uh is where you're at, maybe not where everyone is at.
+30:2130 minutes, 21  Um, and then and reviewing them on main, but um, is that is that about right?
+30:2630 minutes, 26  Yeah, exactly. I think yeah, that's why I drew this this uh this this curve, right? because that this this basically describes my journey of you know when I
+30:3430 minutes, 34  started barely could use a couple agents and I was just observing every single thing. I think there's really no shortcut for going from here to there
+30:4230 minutes, 42  because this is really about your personal level of trust in agents, right? Um obviously, you know, as a as engineer, you don't want to just slop
+30:5030 minutes, 50  code into production. So, how do you actually build up that trust? Takes um a lot of uh I guess taste and judgment. Um
+30:5930 minutes, 59  but, uh you know, like I think plugins like Pstack definitely kind of help you uh get up to speed much quicker. Uh, and
+31:0831 minutes, 8  so I guess it's like if you trust me and you trust Pstack, then in by extension you can maybe trust your agents. But if
+31:1631 minutes, 16  you don't trust me and I I definitely would not encourage people to blindly trust me. Uh, uh, you know, if you build
+31:2431 minutes, 24  up your own set of skills that you can obviously, you know, take a look at PAC and kind of fork it, make it your own, improve the skills. Definitely encourage
+31:3231 minutes, 32  that. Uh but for me it's really all about it just keeps coming back to trust. You know every one of us here in this chat have a different standard for
+31:4131 minutes, 41  engineering. Uh and there are different things that are important for us in our codebase. And uh when you are able to
+31:5031 minutes, 50  encode all of that into skills and you can verify that your agent is actually doing them that allows you to really kind of ascend this curve and um uh you
+32:0032 minutesknow start automating things. Uh there's another piece I wanted to talk about. Um if there's more Yeah, go for it. I'll I'll pick up more
+Chapter 7: Architecture for agent-friendly coding
+32:0832 minutes, 8  questions as I go. But yeah, I think there's a third part to this which I haven't talked about yet, which is kind of an interesting one which is like refactoring and rewriting
+32:1732 minutes, 17  like one of the uh I guess most controversial one of the most controversial topics in the industry I think is like should you rewrite your
+32:2532 minutes, 25  app or not? Um because I think engineers are very prone to this where especially when you join a company you come in and
+32:3432 minutes, 34  you see like the code base and you're like oh man this is like who wrote this code you know it's terrible I want to rewrite the whole thing there is a
+32:4232 minutes, 42  very common inclination and I think a lot of you know before agents um and I guess arguably even now people will
+32:5032 minutes, 50  definitely discourage you from re rewriting stuff but I'm actually here to make a case for why you might want to consider
+32:5832 minutes, 58  Um because I think it really depends. Uh you know uh brownfield applications I think are
+33:0533 minutes, 5  actually in a pretty good spot especially if they're set up well already. Uh and like recently I've been talking to some people but uh you know I
+33:1433 minutes, 14  I was just observing I I just noticed this parallel which is that a lot of big
+33:2133 minutes, 21  tech company problems are now everybody's problems. Um, and the big tech company problem, you know, like when I was working at Meta, like we had
+33:2933 minutes, 29  this giant monora repo, we had like, I don't know, tens of thousands of engineers just, you know, like banging on their keyboards and and shipping code
+33:3833 minutes, 38  and a lot of really great engineers at Meta.
+33:4233 minutes, 42  Uh, but, uh, I'll say like, you know, you'll be surprised that the code quality is actually not that good.
+33:4833 minutes, 48  [laughter] Um, and so I often joke that like, you know, before AI sloth, we had human sloth. Um and so uh you know I
+33:5633 minutes, 56  think a lot of big tech infra like uh like what Meta has or Google you know you know really big tech companies are
+34:0334 minutes, 3  actually designed for that where you you're sort of like you're catering to the the you know like uh this sounds so bad to say but like the the least
+34:1234 minutes, 12  capable engineer on your team right you build you build frameworks you build conventions you build guard rails you
+34:1934 minutes, 19  know you restrict credentials so that you know your intern doesn't wipe your production database Um
+34:2634 minutes, 26  there's uh you know if you have that level of infra already I think your agents can actually already do a very solid job right because they have the
+34:3534 minutes, 35  the guard rails are already in place for agents to not cause havoc or not cause too much havoc uh in your codebase um
+34:4434 minutes, 44  and you can always add more you know guard rails. Uh but I think like green field applications especially are you know like the brand new applications are
+34:5334 minutes, 53  like the biggest risk in my opinion. Uh and also the greatest opportunity because you know if you vibe code a
+35:0035 minutesproject uh a prototype um like we did for Grockbot you know Grockbot was spun up very very very quickly. Um and if you
+35:0835 minutes, 8  if you haven't heard of of Grockbot it's like a a new application we just launched yesterday. Uh it's it's really cool. uh lets you orchestrate your
+35:1835 minutes, 18  create like individual agents that have their own identity and you can kind of orchestrate them. It's super cool.
+35:2335 minutes, 23  Definitely check it out. Um but yeah, that was it's like a very it was a very green field application like most prototypes are so like vibe coded very
+35:3235 minutes, 32  quickly. Humans were not reading the code at all. And uh I had this tweet recently uh where I said something about
+35:4135 minutes, 41  organic architecture. Um maybe I'll find it. Uh but the idea is
+35:4935 minutes, 49  that uh when you have a completely vibe coded application, you essentially have no guard rails whatsoever. So uh your
+35:5735 minutes, 57  agents when you give them a task, they will just solve it in whatever method is the most convenient. And over time you get
+36:0636 minutes, 6  into this uh situation where you have a codebase that is spiraling out of control because you don't understand it.
+36:1436 minutes, 14  Uh your agents understand it I guess in a way but like they've built something that is you know optimized for short for
+36:2136 minutes, 21  shortcuts. Uh and uh you know it will you will suffer you'll have a lot of of issues with that application.
+36:3036 minutes, 30  Uh so I think starting your codebase with uh like very strong constraints is
+36:3736 minutes, 37  very much needed uh because like when you have a codebase that you can trust, right? when you have guardrails that
+36:4436 minutes, 44  actually help you uh uh help your agents write good code, you can get into the you know like into this part of the
+36:5236 minutes, 52  curve where I I where like I I said you know I woke up today and I had like 20 PRs merged u by my agents and that's
+37:0037 minutesbecause I invested a lot a lot of time uh over 600 PRs I I I calculated yesterday uh when I refactored all of
+37:1037 minutes, 10  Grockbot to this new architecture that I've been Um, and yeah, I've gotten to a point where I
+37:1937 minutes, 19  I don't really look I really don't look at the code anymore. And um, I say that not just, you know, to sell you tokens,
+37:2537 minutes, 25  but because I, you know, it it it took a lot of work to get to that point. I spent a lot of tokens to get the codebase to this point where I no longer
+37:3437 minutes, 34  have to look at it. Uh but I'm very excited because you know of the potential where you know it's not just
+37:4137 minutes, 41  this doesn't just benefit me it benefits everyone contributing to Grockbot and it also empowers you know designers and
+37:4937 minutes, 49  product managers and you know pe uh even GTM people to add features to Grockbot and I don't have to worry you know I
+37:5637 minutes, 56  don't have to to wake up at night in in the middle of the night and worry like oh someone's just merged a perf regression right I have a ton of
+38:0538 minutes, 5  constraints and CI is like it's actually very annoying to write code in in graph web but like agents absorb all of that annoyance.
+38:1338 minutes, 13  Um but yeah I'm happy to talk about what exactly that is. Um yeah I think one question um
+Chapter 8: CI and constraints in codebases
+38:2138 minutes, 21  before we get into the this part here is just around that element of like what your your your CI looks like or maybe some of the constraints and then also
+38:2938 minutes, 29  like the average PR size. I saw a question about that earlier just to give people you know kind of a a glance. So it doesn't have to be like mathematically average, but just uh you
+38:3738 minutes, 37  know like what generally the size of the a PR is. Um if it's only a couple lines of code or you know um yeah
+38:4538 minutes, 45  um I think it depends uh I'm trying to do this in a way where I'm
+38:5338 minutes, 53  not going to like you. Yeah, you don't have to share the actual number like an actual average. I think this this is fine benchmark but like we have so okay this is not
+39:0239 minutes, 2  that interesting but uh well fun fact is that virtualization in grockbot and in uh cursor is actually powered by uh
+39:1239 minutes, 12  pretext uh which is a sort of new library that someone's built um that's really interesting you should you should
+39:2039 minutes, 20  check it out but that's not really that important uh I think the average PR size I actually don't know. I pro I don't
+39:2739 minutes, 27  know if I want to click on these. Uh I probably can, but I would say like they can range anywhere from a few hundred
+39:3439 minutes, 34  lines or 50 lines to like a thousand depending on what the thing is doing. Uh so like here I'm actually like deleting
+39:4239 minutes, 42  a bunch of files. So I expect that it's just like mostly deletion. Uh but yeah, it kind of varies.
+39:4939 minutes, 49  There's no like Yeah, there's no like hard cap or hard limit. Are there all like 50 line P?
+39:5339 minutes, 53  There's no hard cap. Yeah, there's definitely no hard cap, but I I do encourage my agents to split up their work into multiple PRs. Uh I do that
+40:0140 minutes, 1 secondmostly because uh I like I like the idea of the I guess maybe this is much harder to do now as in the world of agents and
+40:1040 minutes, 10  you have like so many commits, but I like the idea that you know the git history is a very rich source of context. Uh, and I like the I like each
+40:1940 minutes, 19  PR to sort of atomically describe what that small piece of thing is doing, which also makes it easier for me to
+40:2640 minutes, 26  revert changes and like figure out, you know, oh, I shipped a bug and it's just it's here, right? It's not in this 40,000 line PR where who knows what landed in there.
+40:3840 minutes, 38  Uh, but yeah, I don't have a hard cap on PR size.
+40:4240 minutes, 42  Cool. And then um yeah, also quick question on like CI. So again, you don't have to go into like uh the screen share of like your CI does, but just generally
+40:5140 minutes, 51  would you describe what the CI kind of looks like uh or how strict it is?
+40:5640 minutes, 56  Uh yeah, so uh well specifically for Grockbot. So Dune is the is the sort of cheeky code
+41:0441 minutes, 4  code name for the architecture that we've built for Grockbot. Um the CI looks pretty annoying because there's
+41:1341 minutes, 13  checks for everything. So like literally I have um uh well if you've written any React for example you know you know that
+41:2041 minutes, 20  one of the biggest foot guns in React is use effect. Uh so in uh Dune and in graphbot we've banned use
+41:2941 minutes, 29  effect. So Dune is just you can the the mental model of what Dune is uh you can kind of think of it as like Nex.js JS
+41:3641 minutes, 36  for uh electron apps and it's designed for agents to write uh and it's like custom for you know our agent powered
+41:4541 minutes, 45  applications. Um so the CI checks are very like specific to that like you know don't use use effect it's it's it's
+41:5241 minutes, 52  banned like CI will fail uh and yell at you. We have like some of the more interesting ones that people might raise
+41:5941 minutes, 59  eyebrows is like I actually ban code comments as well. Uh which is very interesting. Uh but I've noticed that
+42:0842 minutes, 8  99% of the time agents just write code comments that kind of describe some historical thing that is actually
+42:1542 minutes, 15  totally irrelevant to the code. Um like it will often say like you know oh Lauren said you should never do this and it's now in in a code comment. I'm like
+42:2342 minutes, 23  what? like why what that was I didn't say that as like a durable you know global rule I just meant like your this
+42:3042 minutes, 30  PR sucks and you should change that part but agents don't really understand us that well surprisingly uh and or they
+42:3942 minutes, 39  kind of assume too much and they kind of do things in like very stupid ways so like yeah we just ban everything
+42:4642 minutes, 46  everything you can imagine like the agents are bad at we ban uh so one example that we actually suffer for a
+42:5342 minutes, 53  lot in the agents window is we have uh you know you if you've used the agents window you've definitely seen performance issues and you know we're
+43:0143 minutes, 1 secondconstantly trying to fix them. Uh but it's like a it's a never- ending struggle because there's so many pull
+43:0843 minutes, 8  requests that get merged every any one of them could just regress performance or stability or reliability. Uh you know the agents window doesn't have this
+43:1743 minutes, 17  architecture yet. I plan to do bring this learning back there and kind of refactor everything there. Uh but uh it
+43:2543 minutes, 25  just regresses super often uh because uh there's just one example is like we have very poor um isolation between
+43:3443 minutes, 34  processes. So like on you know on on Electron you have a renderer thread that renders your UI but you also have like a main thread that you can run other code
+43:4243 minutes, 42  that you know doesn't need to block the renderer.
+43:4643 minutes, 46  Um, but we do a poor job of separating those things. And so oftentimes you just accidentally have code that gets pulled
+43:5343 minutes, 53  into running on the renderer thread and then all of a sudden you're competing with the the renderer that you know that
+44:0044 minuteshas a very if you want like 60 fps you have to every frame that gets drawn has to be done in 16 milli . So very
+44:0844 minutes, 8  very small you know deadline per frame uh if you want you know a very smooth product. Uh and when you start building bringing in accidentally bringing in you
+44:1744 minutes, 17  know things that are like very computationally heavy or they have a lot of IO uh then you just get into like a
+44:2444 minutes, 24  lot of jank right your your FPS really drops you start uh you know losing frames you get long tasks that take more
+44:3244 minutes, 32  than 16 milli  and you just get this really choppy experience.
+44:3744 minutes, 37  So all of those patterns that we've learned basically building electron apps we've encoded into this framework and it becomes like a hard failure. So I
+44:4544 minutes, 45  literally in in grabbot we literally have a directory called electron main electron renderer and we have uh import
+44:5444 minutes, 54  uh CI guess where we actually check the dependency graph to make sure you're not accidentally importing code from one
+45:0245 minutes, 2  directory to another. Uh so that's enforced by CI um as well as bug bots uh
+45:0945 minutes, 9  which is our which cursors um like code review tool that runs on CI uh you know in our agents MD it's everywhere like so
+45:1845 minutes, 18  I I I um I have this thing here where I I talk about like um you know like there
+Chapter 9: Organizational impact and conclusion
+45:2545 minutes, 25  are multiple layers I think for building a good codebase. Uh obviously the codebase is one where uh if you have an
+45:3345 minutes, 33  architecture like this where it's extremely strict uh you know the the the way to build features is very conventional that's like the strongest
+45:4245 minutes, 42  strongest level of enforcement because agents just love to copy existing patterns. So uh one example of this in
+45:4945 minutes, 49  rockbot is like we have this these concepts called like a feature and we have entry points and transcript cards like oh you know the cards that you see
+45:5745 minutes, 57  in the chat these are all like like nouns I guess in in the framework and so there's a very conventional way of
+46:0546 minutes, 5  creating them and so like a feature is all in in a single directory as an example and so all of the code that
+46:1346 minutes, 13  contributes to that feature lives in one directory so it's all collocated in one place. Makes it super easy. You know, agents don't have to like uh grap around
+46:2146 minutes, 21  and try to figure out like where all the things are. It just looks at the feature and like, oh, okay, I'm working on the onboarding feature in Grockbot. Uh I'm just going to work in this directory.
+46:3246 minutes, 32  And for 80% of the work, it's mostly just very encapsulated there. But, uh like it's like very it's like designed
+46:4146 minutes, 41  again for you know like the dumbest agent like you don't have to think, right? the the the one of the key principles I have for this framework is
+46:5046 minutes, 50  like the shortest the shortest path is the best path.
+46:5546 minutes, 55  So uh because that plays exactly to how agents love to write code is like they like to take shortcuts really you know they they'll find the quickest way to
+47:0447 minutes, 4  solve the problem. So why not make that the best way to solve the problem? Uh so I I I probably won't get into all the
+47:1247 minutes, 12  specific details. Um and uh the the this framework is really more of a collection of ideas and principles rather than
+47:1947 minutes, 19  something that will open source. Uh you can you can you know screenshot this I guess if you want and uh tell your agent
+47:2647 minutes, 26  to uh do some build build something like this for you too.
+47:3147 minutes, 31  Um yeah, but it's really all about the layers uh you know like the the codebase is one part with features uh and
+47:3847 minutes, 38  directories and you know import or blocking import dependencies uh that shouldn't be imported. Uh but and and it all enforces that and static analysis.
+47:4947 minutes, 49  So like uh there's CI checks, we have a lot of lints for bad patterns that we observe. uh compiler diagnostics
+47:5847 minutes, 58  uh there's also rules and bugbot which are um I think like three four five are more soft right these two actually make
+48:0848 minutes, 8  make CI red right so that you know there's a hard constraint where the agent can't just write crappy code
+48:1648 minutes, 16  for rules and skills and buggbot your agents can still forget right you can still or it may not always consistently
+48:2548 minutes, 25  apply them. So, I like to layer them, but I don't I don't like to rely on them
+48:3248 minutes, 32  as the only source of enforcement because it's very very soft, right? And if you if you only have rules and bug ball and skills and a style guide for
+48:4048 minutes, 40  your code, you will it's only a matter of time before your code base looks like complete trash. I'm sorry to say that,
+48:4848 minutes, 48  but uh I definitely recommend yeah like you know investing in you know things that can be hard and forced, right?
+48:5548 minutes, 55  Okay. And this is why you know maybe uh the choice of text stack that you use is also very important. Um like I think for
+49:0349 minutes, 3  example Rust is sort of making you know it's like getting super popular again.
+49:0849 minutes, 8  Uh because the compiler is so strict right the compiler enforces so many different things. you know, there's a borrow checker that you have to appease
+49:1649 minutes, 16  and if as long as you make sure your agents don't write unsafe code blocks, uh you can more or less feel somewhat confident that if the code compiles, it
+49:2549 minutes, 25  probably works and it's good. Uh but you see it gives you that level of trust and confidence that you as a human engineer
+49:3449 minutes, 34  no longer need to go and check it yourself. you know, you you rely on code and static analysis to actually make
+49:4349 minutes, 43  that uh a lot smoother. Um, and I I guess the worst part, the worst place to
+49:5049 minutes, 50  be in is if you are stuck in code review land where you actually enforce all of the constraints, the invariance in your
+49:5749 minutes, 57  codebase by literally the human person saying, you know, reading the code and like, okay, you should not do this, right?
+50:0650 minutes, 6  Every time you have to do that, you should consider that as a code smell like a anti- pattern and you should say, "Okay, instead of me commenting on the
+50:1350 minutes, 13  PR, how do I turn this into a hard rule?" Right? How do I turn this into a lint rule? How do I turn this into a CI
+50:2150 minutes, 21  failure? Or how do I even categorically eliminate this problem uh entirely? Uh I
+50:2850 minutes, 28  I can talk about another migration I've done, but I'll probably pause here. Sure.
+50:3350 minutes, 33  Yeah. I feel like that's that's where I am to be honest is is what you're describing right now which is that like I don't have all of these rules. So I have some things to go do after this
+50:4150 minutes, 41  session in terms of being able to scale my agents. I'm I'm definitely on like the uh you know maybe a couple of parallel ones locally stage like two to
+50:5050 minutes, 50  three locally and I'm sure most people here are on the same. So uh yeah I know we only have a couple minutes left.
+50:5650 minutes, 56  Lauren, was there anything else that you wanted to to highlight? I obviously there's lots of questions so I can grab more but I want to give you a few minutes if there's anything else you want to talk about.
+51:0351 minutes, 3  Well, I think I've been yapping for quite a lot so maybe let's just do questions.
+51:0851 minutes, 8  Okay, cool. Uh, one question that had uh a couple of uh came up a couple times was just around like token usage.
+51:1551 minutes, 15  So the the question is like is is what you're describing a realistic thing for people who are on you know uh a normal
+51:2351 minutes, 23  set of token usage. They don't have you know basically unlimited tokens uh to work with.
+51:2951 minutes, 29  I think that's a really good point. I mean, like obviously, you know, I work at a AI lab where we have unlimited tokens. So, uh I definitely cannot
+51:3951 minutes, 39  say that, you know, this is something everyone should do in the exact same way that I did it. I think it's possible to get to this point without, you know, breaking the bank.
+51:4951 minutes, 49  But you know if you're like an engineering leader or you know you're you you have a startup that you lead um I think to me it's a question of ROI um
+51:5851 minutes, 58  and it's like uh yes you spend a lot of money on tokens in the upfront stage you
+52:0652 minutes, 6  know like refactoring a code base is going to take a lot of tokens uh adding all these things uh is going to take a bunch of tokens but if we're heading to
+52:1452 minutes, 14  a world where agents are writing all the code and you know You want to be very lean, right? You don't want to have to
+52:2252 minutes, 22  hire, you don't want to be, you don't want to become like meta, right? Like I mean like in terms of you don't want to become a 10,000 person engineering or
+52:2952 minutes, 29  because I mean that's a cool problem to have, but also you you have so much overhead. There's like planning, you
+52:3752 minutes, 37  know, like you it's it's a personally I I wouldn't uh it it's not super fun. But um I think you want to stay very nimble,
+52:4652 minutes, 46  right? And you want to you want to be like agents are all about allowing you to do things that you couldn't do before. That's really to me like the
+52:5352 minutes, 53  value of agents, you know, it's not just storing tokens on every single little thing, but um to me like the thing I
+53:0053 minutescouldn't do before is like enforce this level of constraints in a codebase by myself, right? Like I'm just a single
+53:0953 minutes, 9  person, you know? Uh it would have taken me years to build this framework uh and do all the refactoring and
+53:1853 minutes, 18  test everything myself and verify you know like run imagine if there it was just me right know in in pre- agent era just like running you know by it would
+53:2753 minutes, 27  take me so long right and my salary is pretty high right like so you know the the question I think an engineering
+53:3553 minutes, 35  leader might have is just then you know like what is there's a trade-off of do Do you hire someone to do this or do you
+53:4253 minutes, 42  spend the tokens to set up a codebase so that even the the most naive, right, the dumbest agents can do a good job? And
+53:5153 minutes, 51  when you actually get to this point, like even agents that are not, you know, fable size do an excellent job of writing code. And this pays a lot of
+54:0054 minutesdividends as well for me personally where I've empowered not just myself but again like PMs, designers, engineers who
+54:1054 minutes, 10  are not familiar with Grockbot to just contribute in a way that is sustainable.
+54:1654 minutes, 16  So I think yeah it's definitely like a trade-off for sure. You know like nothing is like free for sure. Uh and tokens are pretty expensive. Uh but oh
+54:2554 minutes, 25  actually uh I I I don't know how many of you have seen this but we actually announced Grock 4.6 today so very
+54:3254 minutes, 32  exciting finally out um so yeah graph 4.6 would be like a great it was very very smart uh it's really good on the on
+54:4054 minutes, 40  the benchmarks uh and it's the same the tokens uh well uh I hopefully I'm not saying this incorrectly but uh I believe
+54:4854 minutes, 48  the cost per token is the same as 4.5 so you're actually getting more intelligence for the same cost uh I
+54:5754 minutes, 57  think this is an area that cursor tries to cursor and spaceex AI try to really optimize for like that heredto frontier
+55:0555 minutes, 5  here of you know cost versus intelligence. Uh you know we don't necessarily want to build the biggest model ever because that is extremely
+55:1355 minutes, 13  expensive to run. It's really about like how do you find that sweet spot right?
+55:1755 minutes, 17  You don't you don't need a giant model but it's just super smart right and it's not very expensive for inference.
+55:2455 minutes, 24  Uh but um yeah, I think to kind of round it up, um I think it's like a it's it's there's a if you do your own analysis, I
+55:3355 minutes, 33  feel like it's pretty positive. It it'll be pretty positive that the ROI you get from investing in stuff like this, uh
+55:4155 minutes, 41  just empowers not just yourself, but your whole team to be so much more productive, right? Like imagine if you have an army of engineers like me who
+55:5055 minutes, 50  are shipping so much improvements and and bug fixes uh you know every day right like that is pretty exciting.
+55:5955 minutes, 59  Cool. Uh one last question before we wrap up. This one is for the people in product on the on the call.
+56:0556 minutes, 5  So let's say we do have an army of engineers who are shipping like Lauren.
+56:0956 minutes, 9  I'm just curious like how is the product team or other functions of your company keeping up given that like if you're shipping so quickly have are they using
+56:1856 minutes, 18  AI more to do their jobs? Like as much as you can speak to that obviously you don't have like you're not in that role but just curious about how that works.
+56:2556 minutes, 25  Um I think this is where Grothbot has been actually exceedingly powerful. uh where so before graphbot like you know
+56:3356 minutes, 33  uh obviously cursor only had cursor like we only had agents window we had a CLI we had an IDE and these are really like
+56:4256 minutes, 42  power user tools right like de they're designed for developers so it's very very developerentric you can do knowledge work in them but it like the
+56:5056 minutes, 50  UI is not really optimized for that so we actually didn't really have uh well I think like a lot of people like you know
+56:5856 minutes, 58  GTM product like they might have used cursor uh to do their work but it definitely wasn't like a delightful
+57:0557 minutes, 5  experience for them. Um I think now with Grogbot uh it's become Grogbot is basically like
+57:1357 minutes, 13  the kusher moment for people who are not in tech in my opinion like it's like it's like a very very accessible way to
+57:2157 minutes, 21  use agents in a very comfortable very familiar interface. It looks like iMessage. Um, and it's very fun to, you
+57:2957 minutes, 29  know, you can give your agent a fun name. Uh, you can have you can kind of do orchestration with in a very like natural way where you can sort of, you
+57:3757 minutes, 37  know, each agent's like a person and now you got a team of agents like working on you have one one agent per account that you manage as an example. Or if you're a
+57:4557 minutes, 45  PM, you have, you know, you can have an agent that summarizes all the work that Lauren did last night and then now you know what I did, right? So I think our
+57:5357 minutes, 53  PMs are leveraging that a lot and they're shipping code too. Uh so you know like often times they will just say oh here's a bug I fixed it can you look
+58:0158 minutes, 1 secondat it and then I'll go review it and actually it's just perfect. I'm like okay stamp. Uh so uh that I think that shows that you know the the Dune
+58:0958 minutes, 9  architecture is holding up right the all the the really strict constraints allow people who are not experts in
+58:1758 minutes, 17  engineering to contribute at a high level. Uh so I'm I feel like I'm already seeing that pay off a lot where uh you
+58:2458 minutes, 24  know designers and PMs are just able to to to ship features directly. Um and
+58:3158 minutes, 31  that just makes the Grockbot team super fast, right? Where we can ship so quickly. Um and we have a lot planned.
+58:4058 minutes, 40  So I'm very excited uh to you know uh to to ship more ship more stuff.
+58:4658 minutes, 46  Yeah, that's awesome. Uh well, we are at time. So, uh I guess Lauren, if if folks want to support you, maybe go try out
+58:5358 minutes, 53  Crockbot, try out uh 46 and uh you know, get provide some feedback. But yeah, this was awesome. Really appreciate you taking the time. Uh thanks everyone for
+59:0259 minutes, 2  all the messages in the chat. Lots of good questions. I know we didn't get through everything, but as I kind of said at the top, way more questions than than we could get through, but uh yeah,
+59:0959 minutes, 9  really really thanks thanks for for joining. Thanks everyone for joining and uh hopefully you enjoyed the session. Yep. All right.
+59:1659 minutes, 16  Yeah, I see it. Thank thanks for having me. And uh if you have any more questions yet, just DM me on Twitter.
+59:2159 minutes, 21  I'll I'll open them up. I guess I'll let the let the You're going to get a lot of DMs.
+59:2659 minutes, 26  Yeah, I'll open the updates. So yeah, DM me. Maybe I'll do like a Twitter space at some point. That's all for more questions. But
+59:3359 minutes, 33  really appreciate everyone for showing up uh you know, taking an hour out of your day.
+59:3759 minutes, 37  Yeah. All right. Thanks all. I'll see you the next one. Okay. Thanks everyone. And bye.
+
+Sync to video time

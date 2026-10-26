@@ -1,0 +1,13 @@
+# Transcripts
+
+All transcripts are YouTube auto-generated English captions, copied unedited. Expect caption errors: "potato" for poteto, "Pystack"/"PAC" for pstack, "Grockbot"/"GraphBot" for Grok Bot, "use effect" for `useEffect`, "bug bar" for Bugbot.
+
+| File | What it is | Source |
+|---|---|---|
+| `2026-10-matt-pocock-livestream-poteto-pstack.txt` | Matt Pocock's livestream with poteto: "LIVE: Poteto (creator of pstack) on shipping 1,000's of PR's a month at SpaceX". Covers pstack, `/recall`, using past chats as context, one-way and two-way door PRs, and reviewing commit history in the morning. | <https://www.youtube.com/watch?v=MN9dGgmLyso> (Matt Pocock channel). poteto posted about it on 2 Oct 2026. |
+| `live-session-lauren-tan-trust-curve-verification-dune.txt` | An hour-long live session with Q&A. Chapters: trust curve, verification skills, pstack, evals and maintaining skills, local to cloud agents, architecture for agent-friendly code, CI and constraints (this is where she says `useEffect` and code comments are banned), and organisational impact. She says she has been at Cursor "about 5 months" and that Grok Bot launched "yesterday". The host is addressed as "Colin" in the captions. | Copied from YouTube's transcript panel. The video URL was not recorded. It looks like the session that @0xWaunty summarised in a post Sam bookmarked (see `../x-posts/sam-bookmarks.md`). |
+| `how-i-shipped-2000-prs-trusting-ai-agents.txt` | Talk: "How I Shipped 2000 PRs Last Month — Trusting AI Agents". Covers the trust thesis, the Michelin kitchen analogy, the control-glass verification skill (a CLI plus a feature map), the five-level trust ladder, Dune (the agent-friendly framework behind Grok Bot), banning comments, the gardener role, and "stop the bleeding" with lint rules. | <https://www.youtube.com/watch?v=NjoZoUm85x0> (uploaded by channel "Raner") |
+| `ron-minsky-jane-street-reliable-software-age-of-agents.txt` | Ron Minsky (Jane Street), "Now more than ever: building reliable software in the age of agents", Bug Bash 2026 (Antithesis), 1:06:19. poteto recommended it on 26 Oct 2026 ([post](https://x.com/poteto/status/2114626630429913383)). | <https://www.youtube.com/watch?v=rUYP4C29yCw> |
+| `related/lee-robinson-always-on-agents.txt` | Not poteto. Lee Robinson's talk on always-on, proactive, persistent agents and their building blocks. It is kept for background on bot and routine design (see `compilation/applying-at-microsoft.md`). | Source URL not recorded. |
+
+The original `.vtt` caption files for the Minsky talk (about 677 KB each) are not included. The `.txt` file above has the same text with timestamps.

@@ -1,0 +1,295 @@
+{
+ "fetched": "2026-10-26",
+ "bookmarks": [
+  {
+   "author_id": "2832427459",
+   "conversation_id": "2111133080526495985",
+   "created_at": "2026-10-16T16:32:04.000Z",
+   "edit_history_tweet_ids": [
+    "2111133080526495985"
+   ],
+   "entities": {
+    "mentions": [
+     {
+      "end": 85,
+      "id": "2085838061347217408",
+      "start": 81,
+      "username": "bot"
+     }
+    ],
+    "urls": [
+     {
+      "display_url": "pic.x.com/ah9dbKnrWy",
+      "end": 302,
+      "expanded_url": "https://x.com/poteto/status/2111133080526495985/photo/1",
+      "media_key": "3_2111132352542121984",
+      "start": 279,
+      "url": "https://t.co/ah9dbKnrWy"
+     }
+    ]
+   },
+   "id": "2111133080526495985",
+   "lang": "en",
+   "note_tweet": {
+    "entities": {
+     "mentions": [
+      {
+       "end": 85,
+       "id": "2085838061347217408",
+       "start": 81,
+       "username": "bot"
+      }
+     ],
+     "urls": [
+      {
+       "display_url": "github.com/cursor/plugins…",
+       "end": 1203,
+       "expanded_url": "https://github.com/cursor/plugins/tree/main/pstack",
+       "start": 1180,
+       "url": "https://t.co/u9xIlN3eN0"
+      }
+     ]
+    },
+    "text": "how do you trust your agents' work more? copy this post/link and give it to your @bot or agent!\n\n1. codebase improvements: this is just good software engineering - better architecture, stronger types and invariants, clear boundaries. agents love to copy what exists and take the shortest path, so make the easy thing the right thing. categorically eliminate problems through code and you won't need to think about it again.\n2. static analysis: lint rules, tests, CI, verification (eg TLA+). very token efficient ways to catch issues ahead of time.\n3. prose: comments, rules, AGENTS.md, skills - anything that can't be enforced and requires agent judgment. use it minimally, but do use /create-verification-skill.\n4. human review: the hardest to scale. at the rate agents land code, it's pretty much impossible to thoroughly review every PR, so spend that effort on the highest leverage point, designing an environment where agents do the right thing by default.\n\nthis forms an inverse pyramid: you want most of your effort at the top, least at the bottom. codebase improvements are deterministic, making it more token efficient, and lets you sleep more soundly at night.\n\ninstall https://t.co/u9xIlN3eN0 and create a new Project:\n1. look through my slack/chat messages and code review comments where i've given feedback on PRs, code, architecture\n2. use /recall on my past transcripts to learn how i steer agents\n3. /poteto-mode use /correct and /architect on past commits to find the most common pitfalls agents fall into, then propose a plan to rearchitect the code i own so it's more agent friendly. answer open questions with prototyping rather than defer to me, and back the plan with real data. \n4. before you begin, use /sharpen + /in-your-own-words and confirm this prompt with me"
+   },
+   "public_metrics": {
+    "bookmark_count": 13133,
+    "impression_count": 744062,
+    "like_count": 6903,
+    "quote_count": 112,
+    "reply_count": 604,
+    "retweet_count": 515
+   },
+   "text": "how do you trust your agents' work more? copy this post/link and give it to your @bot or agent!\n\n1. codebase improvements: this is just good software engineering - better architecture, stronger types and invariants, clear boundaries. agents love to copy what exists and take the https://t.co/ah9dbKnrWy",
+   "url": "https://x.com/poteto/status/2111133080526495985",
+   "_src": "poteto",
+   "_bookmark": true
+  },
+  {
+   "author_id": "2832427459",
+   "created_at": "2026-10-14T22:23:50.000Z",
+   "edit_history_tweet_ids": [
+    "2110496830429839869"
+   ],
+   "id": "2110496830429839869",
+   "public_metrics": {
+    "bookmark_count": 3525,
+    "impression_count": 258413,
+    "like_count": 3431,
+    "quote_count": 28,
+    "reply_count": 119,
+    "retweet_count": 126
+   },
+   "referenced_tweets": [
+    {
+     "id": "2110476094704910407",
+     "type": "quoted"
+    }
+   ],
+   "text": "perhaps one of the most durable parts of pstack are its engineering principles: very concise skills (~10-20 loc) that distill down good practices into its core. \n\nas models get smarter, i expect most of pstack skills to compress into short principles or workflows (a generic list https://t.co/bDIpHhE1cM",
+   "url": "https://x.com/poteto/status/2110496830429839869",
+   "_src": "poteto",
+   "_bookmark": true,
+   "note_tweet": {
+    "entities": {
+     "mentions": [
+      {
+       "end": 845,
+       "id": "272239060",
+       "start": 832,
+       "username": "VictorTaelin"
+      }
+     ],
+     "urls": [
+      {
+       "display_url": "x.com/VictorTaelin/s…",
+       "end": 876,
+       "expanded_url": "https://x.com/VictorTaelin/status/2096273196412498057",
+       "start": 853,
+       "url": "https://t.co/qTGVfoKSyD"
+      },
+      {
+       "display_url": "github.com/cursor/plugins…",
+       "end": 1004,
+       "expanded_url": "https://github.com/cursor/plugins/blob/main/pstack/docs/guide/08-principles.md",
+       "start": 981,
+       "url": "https://t.co/wuTWsflVN3"
+      }
+     ]
+    },
+    "text": "perhaps one of the most durable parts of pstack are its engineering principles: very concise skills (~10-20 loc) that distill down good practices into its core. \n\nas models get smarter, i expect most of pstack skills to compress into short principles or workflows (a generic list of steps) and that i will be able to delete a few of them. \n\nhow it works is that /poteto-mode contains a short index of available principles and tells agents \"In your reply, name each principle that shaped a decision and the specific choice it changed.\" this is why you'll often see a Principles Named or Used section at the end of the agent's response\n\nmany of these principles were extracted from my sessions correcting agents since the start of this year. some are inspired by problems i see people talk about, like Attack the Premise, inspired by @VictorTaelin's post https://t.co/qTGVfoKSyD\n\nyou can also use the principles as skills if you want greater control, by invoking /principle-<name> \n\nhttps://t.co/wuTWsflVN3"
+   },
+   "entities": {
+    "urls": [
+     {
+      "display_url": "x.com/unclebobmartin…",
+      "end": 303,
+      "expanded_url": "https://twitter.com/unclebobmartin/status/2110476094704910407",
+      "start": 280,
+      "url": "https://t.co/bDIpHhE1cM"
+     }
+    ]
+   }
+  },
+  {
+   "author_id": "1886676971653844992",
+   "conversation_id": "2110007607494672584",
+   "created_at": "2026-10-13T13:59:50.000Z",
+   "edit_history_post_ids": [
+    "2110007607494672584"
+   ],
+   "entities": {
+    "urls": [
+     {
+      "display_url": "pic.x.com/5bNGqjbI60",
+      "end": 299,
+      "expanded_url": "https://x.com/0xWaunty/status/2110007607494672584/video/1",
+      "media_key": "13_2109955747568111616",
+      "start": 276,
+      "url": "https://t.co/5bNGqjbI60"
+     },
+     {
+      "display_url": "x.com/distortgeekin/…",
+      "end": 323,
+      "expanded_url": "https://twitter.com/distortgeekin/status/2108897917729738810",
+      "start": 300,
+      "url": "https://t.co/SDOBZu6OMZ"
+     }
+    ]
+   },
+   "id": "2110007607494672584",
+   "lang": "en",
+   "note_tweet": {
+    "text": "SpaceX AI engineer Lauren Tan:\n\n\"Design for the dumbest agent\"\n\nShe bans code comments and useEffect so her agents can't write bad code\n\nIn one live session, she shows exactly how to set it up\n\nVerification → Evals → One directory → CI bans → Cloud agents\n\nStep 1 → give your agent eyes and hands - it runs the real app, takes CPU traces, opens the simulator\n\nStep 2 → unit test your skills - sub-agents run them, a judge on another model scores, loop until 10/10\n\nStep 3 → one directory per feature - agents love shortcuts, so the shortest path has to be the right one\n\nStep 4 → ban the bad patterns in CI - no useEffect, no code comments, no cross-thread imports\n\nStep 5 → send bug reports to a cloud agent - it reproduces each one and flags the ones already fixed\n\nThe result: PMs and designers ship features straight into Grok Bot and she just stamps them\n\nWorth more than most $800 AI coding courses\n\nBookmark and watch it today"
+   },
+   "public_metrics": {
+    "bookmark_count": 350,
+    "impression_count": 24569,
+    "like_count": 170,
+    "quote_count": 1,
+    "reply_count": 10,
+    "repost_count": 9
+   },
+   "referenced_tweets": [
+    {
+     "id": "2108897917729738810",
+     "type": "quoted"
+    }
+   ],
+   "text": "SpaceX AI engineer Lauren Tan:\n\n\"Design for the dumbest agent\"\n\nShe bans code comments and useEffect so her agents can't write bad code\n\nIn one live session, she shows exactly how to set it up\n\nVerification → Evals → One directory → CI bans → Cloud agents\n\nStep 1 → give your https://t.co/5bNGqjbI60 https://t.co/SDOBZu6OMZ",
+   "url": "https://x.com/0xWaunty/status/2110007607494672584",
+   "_src": "bookmarks",
+   "_bookmark": true
+  },
+  {
+   "author_id": "722467942542282752",
+   "conversation_id": "2112954960627536111",
+   "created_at": "2026-10-21T17:11:34.000Z",
+   "edit_history_post_ids": [
+    "2112954960627536111"
+   ],
+   "entities": {
+    "urls": [
+     {
+      "display_url": "pic.x.com/REJVQW0245",
+      "end": 307,
+      "expanded_url": "https://x.com/__morse/status/2112954960627536111/video/1",
+      "media_key": "13_2112954196148301824",
+      "start": 284,
+      "url": "https://t.co/REJVQW0245"
+     }
+    ]
+   },
+   "id": "2112954960627536111",
+   "lang": "en",
+   "public_metrics": {
+    "bookmark_count": 20,
+    "impression_count": 1594,
+    "like_count": 29,
+    "quote_count": 0,
+    "reply_count": 3,
+    "repost_count": 2
+   },
+   "text": "playwriter is the easiest way to control your Chrome browser with agents\n\njust install an extension and all your agents from opencode, pi, claude can control Chrome\n\nand it's programmable with scripts: you can ask your agents to write SDKs &amp; CLIs that use your logged in websites https://t.co/REJVQW0245",
+   "url": "https://x.com/__morse/status/2112954960627536111",
+   "_src": "bookmarks",
+   "_bookmark": true
+  },
+  {
+   "author_id": "1042765170",
+   "conversation_id": "2111966450311385154",
+   "created_at": "2026-10-18T23:43:34.000Z",
+   "edit_history_post_ids": [
+    "2111966450311385154"
+   ],
+   "entities": {
+    "urls": [
+     {
+      "display_url": "pic.x.com/RrgbGgrymo",
+      "end": 54,
+      "expanded_url": "https://x.com/boristane/status/2111966450311385154/photo/1",
+      "media_key": "3_2111966338772303872",
+      "start": 31,
+      "url": "https://t.co/RrgbGgrymo"
+     }
+    ]
+   },
+   "id": "2111966450311385154",
+   "lang": "en",
+   "public_metrics": {
+    "bookmark_count": 1632,
+    "impression_count": 199773,
+    "like_count": 1436,
+    "quote_count": 31,
+    "reply_count": 83,
+    "repost_count": 54
+   },
+   "text": "the only sane code review loop https://t.co/RrgbGgrymo",
+   "url": "https://x.com/boristane/status/2111966450311385154",
+   "_src": "bookmarks",
+   "_bookmark": true
+  },
+  {
+   "author_id": "964210921001377792",
+   "conversation_id": "2113743983839203685",
+   "created_at": "2026-10-23T21:26:51.000Z",
+   "edit_history_post_ids": [
+    "2113743983839203685"
+   ],
+   "entities": {
+    "urls": [
+     {
+      "display_url": "pic.x.com/1FutXeBlR6",
+      "end": 84,
+      "expanded_url": "https://x.com/mrmagan_/status/2113743983839203685/photo/1",
+      "media_key": "3_2113743951442366464",
+      "start": 61,
+      "url": "https://t.co/1FutXeBlR6"
+     },
+     {
+      "display_url": "pic.x.com/1FutXeBlR6",
+      "end": 84,
+      "expanded_url": "https://x.com/mrmagan_/status/2113743983839203685/photo/1",
+      "media_key": "3_2113743967275909120",
+      "start": 61,
+      "url": "https://t.co/1FutXeBlR6"
+     }
+    ]
+   },
+   "id": "2113743983839203685",
+   "lang": "en",
+   "public_metrics": {
+    "bookmark_count": 7081,
+    "impression_count": 2234245,
+    "like_count": 7760,
+    "quote_count": 73,
+    "reply_count": 242,
+    "repost_count": 171
+   },
+   "text": "I bet a lot of people are having the same idea I'm having... https://t.co/1FutXeBlR6",
+   "url": "https://x.com/mrmagan_/status/2113743983839203685",
+   "_src": "bookmarks",
+   "_bookmark": true
+  }
+ ]
+}
