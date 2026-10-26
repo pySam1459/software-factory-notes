@@ -94,6 +94,34 @@ test('--staged checks the index and --scope limits paths', () => {
   assert.doesNotMatch(res.out, /other\/x\.ts/);
 });
 
+test('flags pytest.mark.skip, xfail and pytest.skip', () => {
+  const r = repo({
+    ...BASE,
+    'tests/test_notes.py': 'def test_ok():\n    assert True\n',
+  });
+  commit(r, {
+    'tests/test_notes.py': [
+      'import pytest',
+      '',
+      '@pytest.mark.skip',
+      'def test_ok():',
+      '    assert True',
+      '',
+      '@pytest.mark.xfail',
+      'def test_later():',
+      '    assert False',
+      '',
+      'def test_dynamic():',
+      '    pytest.skip("no")',
+      '',
+    ].join('\n'),
+  });
+  const { code, out } = run(r.dir, '--base', 'main');
+  assert.equal(code, 1, out);
+  const hits = out.split('\n').filter((line) => line.includes('New pytest skip or xfail'));
+  assert.equal(hits.length, 3, out);
+});
+
 test('azure format emits logissue commands', () => {
   const r = repo(BASE);
   commit(r, { 'src/a.ts': 'export const a = 1 as any;\n' });

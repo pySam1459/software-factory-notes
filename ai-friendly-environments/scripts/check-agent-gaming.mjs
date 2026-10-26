@@ -3,8 +3,9 @@
 //   node scripts/check-agent-gaming.mjs --base origin/main [--scope src/features/foo ...] [--format azure]
 //   node scripts/check-agent-gaming.mjs --staged [--scope ...]
 // Flags, in the diff only: deleted or renamed-away test and snapshot files, net removal of test cases,
-// new .skip/.only/xit/fit, new eslint-disable / @ts-ignore / @ts-expect-error / @ts-nocheck / `as any` /
-// `as unknown as`, new entries in eslint-suppressions.json, and strictness flags switched off in tsconfig.
+// new .skip/.only/xit/fit, new pytest.mark.skip/skipif/xfail and pytest.skip/xfail, new eslint-disable /
+// @ts-ignore / @ts-expect-error / @ts-nocheck / `as any` / `as unknown as`, new entries in
+// eslint-suppressions.json, and strictness flags switched off in tsconfig.
 // An added line is allowed if it, or the line above it, carries:
 //   agent-exception reason="..." expires=YYYY-MM-DD approver=<name>
 // and the expiry date has not passed. Exit code 1 if anything is flagged.
@@ -47,6 +48,7 @@ const TEST_FILE = /(^|\/)__tests__\/|\.(test|spec)\.[cm]?[jt]sx?$/;
 const SNAPSHOT_FILE = /\.snap$/;
 const TEST_CASE = /\b(it|test)(\.(only|skip|todo|concurrent|each\s*\(.*?\)))*\s*\(/;
 const FOCUS_SKIP = /\b(describe|it|test|suite)\.(only|skip)\b|\b(xit|xtest|xdescribe|fit|fdescribe)\s*\(/;
+const PYTEST_SKIP = /(?:\bpytest\.mark\.(?:skip|skipif|xfail)\b|\bpytest\.(?:skip|xfail)\s*\()/;
 const SUPPRESSION = [
   [/eslint-disable(-next-line|-line)?\b/, 'eslint-disable directive', 'Fix the code so the rule passes. If it truly cannot, add an agent-exception with reason, expiry and approver.'],
   [/@ts-ignore\b/, '@ts-ignore', 'Fix the type error. Narrow with a type guard or parse at the boundary (e.g. a zod schema).'],
@@ -97,6 +99,9 @@ for (const raw of diff.split('\n')) {
     const ln = newLine++;
     const excepted = () => isExcepted(line, prevAdded, ln);
     if (TEST_FILE.test(file) && TEST_CASE.test(line)) addedCases.set(file, (addedCases.get(file) ?? 0) + 1);
+    if (/\.py$/.test(file) && PYTEST_SKIP.test(line) && !excepted()) {
+      report(file, ln, 'New pytest skip or xfail. Make the test pass or delete it with a human\'s approval; never skip tests in a commit.');
+    }
     if (/\.[cm]?[jt]sx?$/.test(file)) {
       if (FOCUS_SKIP.test(line) && !excepted()) report(file, ln, 'New .only/.skip (or xit/fit). Make the test pass or delete it with a human\'s approval; never skip or focus tests in a commit.');
       for (const [re, what, fix] of SUPPRESSION) {

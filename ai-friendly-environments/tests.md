@@ -107,6 +107,7 @@ Agents make a red build green in these ways, and here is what catches each one i
 | Deleting a test file or snapshot | `check-agent-gaming.mjs`: deleted test/snapshot file |
 | Deleting test cases inside a file | `check-agent-gaming.mjs`: net removal of `it`/`test` calls |
 | `.skip`, `.only`, `xit`, `fit` | `check-agent-gaming.mjs`, `vitest/no-focused-tests` / `no-disabled-tests`, and `vitest run --allowOnly=false` in CI |
+| `pytest.mark.skip`, `pytest.mark.skipif`, `pytest.mark.xfail`, `pytest.skip`, `pytest.xfail` | `check-agent-gaming.mjs` on any added `.py` line |
 | Renaming `foo.test.ts` so the runner ignores it | `check-agent-gaming.mjs`: test renamed to a non-test name |
 | Bulk `-u` snapshot updates | Copilot `preToolUse` guard denies `vitest -u` / `jest -u` |
 | Asserting nothing | `vitest/expect-expect` |

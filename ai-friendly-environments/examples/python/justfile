@@ -1,0 +1,9 @@
+check:
+    uv run ruff check .
+    uv run ruff format --check .
+    uv run pyright
+    uv run lint-imports
+    uv run pytest
+
+new-endpoint name:
+    uv run python scripts/new_endpoint.py {{name}}

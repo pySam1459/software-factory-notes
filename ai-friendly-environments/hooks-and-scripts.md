@@ -17,7 +17,7 @@ Node 20+, no dependencies. It reads a git diff and fails on:
 - deleted test files (`*.test.*`, `*.spec.*`, `__tests__/`) and deleted `.snap` files
 - test files renamed to non-test names
 - net removal of `it(...)`/`test(...)` cases in a test file
-- new `.only` / `.skip` / `xit` / `xdescribe` / `fit` / `fdescribe`
+- new `.only` / `.skip` / `xit` / `xdescribe` / `fit` / `fdescribe`, and in any `.py` file `pytest.mark.skip` / `pytest.mark.skipif` / `pytest.mark.xfail` / `pytest.skip(` / `pytest.xfail(`
 - new `eslint-disable`, `@ts-ignore`, `@ts-nocheck`, `@ts-expect-error`, `as any`, `as unknown as`
 - any increase in `eslint-suppressions.json` counts, or a new entry
 - `tsconfig*.json` lines that set a strict flag to `false`, or set `allowJs`/`skipLibCheck` to `true`

@@ -2,7 +2,7 @@
 
 A practical guide to making a codebase safe for agents to work in. The approach is to turn non-determinism into determinism: anything you would otherwise have to remember, review for or write in a prompt becomes architecture, a type, a lint rule, a test or a CI check. The agent is then restricted to the paths that are correct.
 
-This is written for a large, legacy React/TypeScript codebase on Azure DevOps (ADO), with GitHub Copilot as the agent. Most of it applies elsewhere.
+This is written for a large, legacy React/TypeScript codebase on Azure DevOps (ADO), with GitHub Copilot as the agent. Most of it applies elsewhere. [python.md](python.md) is the same approach for a small, new FastAPI backend and TypeScript frontend.
 
 Compiled 2026-10-26 by Chief (Sam's Grok Bot).
 
@@ -18,6 +18,7 @@ Compiled 2026-10-26 by Chief (Sam's Grok Bot).
 |---|---|
 | [principles.md](principles.md) | The inverse pyramid, turning rules into checks, error messages that name the fix, failing only on additions, exceptions, and a rule table |
 | [typescript-strictness.md](typescript-strictness.md) | Strict tsconfig flags, discriminated unions, branded types, banning `as any` and `@ts-ignore` |
+| [python.md](python.md) | Strict Python typing, which checker to gate on, and one paved road for a FastAPI service |
 | [react.md](react.md) | Banning `useEffect` and what to use instead, allowed wrapper hooks, lint config |
 | [comments.md](comments.md) | Why comments are banned, and the lint rule that does it |
 | [lint-rules.md](lint-rules.md) | ESLint flat config, and the ratchet: suppressions baseline, only new violations fail |
@@ -44,9 +45,17 @@ examples/
   azure-pipelines/pr-checks.yml
   copilot/agent-guard.json         goes in .github/hooks/
   copilot/my-area.instructions.md  goes in .github/instructions/
+  python/                          uv project: one FastAPI endpoint, just check, new-endpoint
+    pyproject.toml                 Ruff, Pyright strict, pytest, import-linter
+    justfile                       check, new-endpoint
+    src/app/{api,services,repositories,models,log.py}
+    scripts/new_endpoint.py        plus scripts/templates/
+    tests/
 ```
 
 Run the script tests with `node --test scripts/`. These need Node 20+ and git, with no dependencies. The ESLint example was checked with ESLint 9.39, typescript-eslint 8 and @vitest/eslint-plugin. Run the rule test with `node examples/eslint-rules/no-comments.test.mjs` from a project that has `eslint` installed.
+
+The Python example is checked with `cd examples/python && uv sync && just check`. That runs Ruff, Pyright, import-linter and pytest. `just new-endpoint name=widget` writes the next endpoint from the templates. See [python.md](python.md) for the versions that passed.
 
 ## Start small **[Chief]**
 
