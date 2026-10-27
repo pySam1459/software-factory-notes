@@ -1,6 +1,6 @@
 # Software factory notes
 
-Sam's personal notes on building an AI-agent 'software factory': AI-friendly codebase practices, and advice collected from poteto (Lauren Tan).
+Sam's personal notes on building an AI-agent 'software factory': AI-friendly codebase practices, advice collected from poteto (Lauren Tan), and research on designing the always-on agent.
 
 ## poteto-advice
 
@@ -21,6 +21,13 @@ Guides for TypeScript/React and Python, traits, hooks and scripts, Copilot skill
 - [Traits](ai-friendly-environments/traits.md) and the [example traits](ai-friendly-environments/examples/traits/README.md)
 - [Hooks and scripts](ai-friendly-environments/hooks-and-scripts.md)
 - Copilot skills: [`/correct`](ai-friendly-environments/copilot-skills/correct/SKILL.md) and [`/check-traits`](ai-friendly-environments/copilot-skills/check-traits/SKILL.md)
+
+## agent-design
+
+Notes on designing Sam's always-on agent and multi-bot system. Start at the [folder README](agent-design/README.md).
+
+- [Decision models](agent-design/decision-models.md)
+- [Cursor Agent SDK](agent-design/cursor-agent-sdk.md)
 
 ## How this repo is updated
 
