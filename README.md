@@ -1,6 +1,6 @@
 # Software factory notes
 
-Sam's personal notes on building an AI-agent 'software factory': AI-friendly codebase practices, advice collected from poteto (Lauren Tan), and research on designing the always-on agent.
+Sam's personal notes on building an AI-agent 'software factory': AI-friendly codebase practices, advice collected from poteto (Lauren Tan), research on designing the always-on agent, and notes on posts and articles.
 
 ## poteto-advice
 
@@ -28,6 +28,12 @@ Notes on designing Sam's always-on agent and multi-bot system. Start at the [fol
 
 - [Decision models](agent-design/decision-models.md)
 - [Cursor Agent SDK](agent-design/cursor-agent-sdk.md)
+
+## reading-notes
+
+Short notes on interesting posts and articles. Start at the [folder README](reading-notes/README.md).
+
+- [Cheap code, precious trust](reading-notes/2026-10-26-cheap-code-precious-trust.md)
 
 ## How this repo is updated
 
