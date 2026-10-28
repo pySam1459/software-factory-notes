@@ -14,6 +14,8 @@ Compiled 2026-10-26 by Chief (Sam's Grok Bot). X data runs up to 26 Oct 2026, 08
 
 ## Index
 
+- [poteto (Lauren Tan) workshop: trust, verification and hard constraints](../reading-notes/2026-10-28-poteto-agent-team-workshop.md): trust vs number of agents; verification skills so you are not the bottleneck; hard constraints (lint, CI, Dune) beat soft rules.
+
 ### Compilation
 
 | File | Contents |
