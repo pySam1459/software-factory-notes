@@ -2,6 +2,7 @@
 
 - **Source:** [X post by @akarixbt](https://x.com/akarixbt/status/2114389035388989873), which attaches a ~57 min workshop video. Lauren Tan (poteto), software engineer at SpaceXAI and ex-Cursor, talking with a host (Colin).
 - **Read:** 2026-10-28
+- **Repost:** this appears to be the same hour-long live session already transcribed in `poteto-advice/raw/transcripts/live-session-lauren-tan-trust-curve-verification-dune.txt` and compiled in `poteto-advice/compilation/core-principles.md`. Almost everything below was already in the notes. The three genuinely new points have been added to `poteto-advice/compilation/new-since-2026-10-23.md` (section 6).
 - **Caveat:** the post's hype ("50+ agents", "job of 20 engineers", "97% of engineers", "$750K offers") is not said anywhere in the video. Her real numbers are 3000+ PRs in 5 months, ~1,000 last month, and waking up to ~20 PRs merged by agents.
 
 ## Core idea: the trust curve
