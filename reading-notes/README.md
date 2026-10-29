@@ -6,6 +6,7 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 
 ## Index
 
+- [Tw93's 20 AI coding rules](2026-10-29-tw93-ai-coding-rules.md): English version of his Chinese list (plus the blog's 21st harness/Waza rule); keep the verification, risk-tier and writer-not-reviewer bits, skip the cheerleading.
 - [Evals are the most underrated skill](2026-10-29-evals-underrated-skill.md): 14-point eval playbook (error analysis, goldens, deterministic checks, trajectory/pass^k, CI gates); mchulet link is a repost of @divaagurlxw's list.
 - [Harness, Loops, Graphs](2026-10-28-harness-loops-graphs.md): m4lkxx's seven-level ladder from chat to self-improving agent systems, quoted by another repost of poteto's live session; gate on cost of undo, not confidence.
 - [GitHub Agentic Workflows GA](2026-10-28-github-agentic-workflows-ga.md): Markdown-defined agent workflows compiled to Actions, now GA; a natural home for checking traits in CI.
