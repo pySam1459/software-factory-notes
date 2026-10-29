@@ -6,6 +6,7 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 
 ## Index
 
+- [Harness, Loops, Graphs](2026-10-28-harness-loops-graphs.md): m4lkxx's seven-level ladder from chat to self-improving agent systems, quoted by another repost of poteto's live session; gate on cost of undo, not confidence.
 - [GitHub Agentic Workflows GA](2026-10-28-github-agentic-workflows-ga.md): Markdown-defined agent workflows compiled to Actions, now GA; a natural home for checking traits in CI.
 - [Ban useState, use useReducer](2026-10-28-ban-usestate-usereducer.md): Matt Pocock and hot_town on banning useState so agents take one explicit state path.
 - [A factory with zero reverts](2026-10-28-factory-zero-reverts.md): Tanveer Gill's 453 PRs, 0 reverts, three rules, plus his "software factory from zero" roundup.
