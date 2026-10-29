@@ -6,6 +6,7 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 
 ## Index
 
+- [Maze: codebase slop indicators](2026-10-29-maze-codebase-slop-indicators.md): Maze's checklist of agent-era code smells, mapped to GitHub Copilot reviewer skills, CI and pstack hard constraints.
 - [Ondrej's build, review, ship agent loop](2026-10-29-ondrej-build-review-ship.md): David Ondrej's three-phase agent flowchart (reproduce, independent read-only review, severity filter, re-review, post-merge loops), mapped to GitHub Copilot agents, skills, Automations, Memory and Actions plus pstack.
 - [Pages as project management (not chats)](2026-10-29-pages-as-project-management.md): Fenech's Grok Bot playbook of one Page per project, a master index, bots that read first and update last, and a weekday heartbeat; try one project for 7 days and watch usage.
 - [Code-driven launch videos (Remotion / HyperFrames)](2026-10-29-code-driven-launch-videos.md): how the T3 Tots launch clip was likely made; agents write React or HTML compositions and render them headlessly to MP4; Remotion needs a company licence at 4+ people, HyperFrames is Apache 2.0.
