@@ -6,6 +6,7 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 
 ## Index
 
+- [Pages as project management (not chats)](2026-10-29-pages-as-project-management.md): Fenech's Grok Bot playbook of one Page per project, a master index, bots that read first and update last, and a weekday heartbeat; try one project for 7 days and watch usage.
 - [Code-driven launch videos (Remotion / HyperFrames)](2026-10-29-code-driven-launch-videos.md): how the T3 Tots launch clip was likely made; agents write React or HTML compositions and render them headlessly to MP4; Remotion needs a company licence at 4+ people, HyperFrames is Apache 2.0.
 - [Tw93's 20 AI coding rules](2026-10-29-tw93-ai-coding-rules.md): English version of his Chinese list (plus the blog's 21st harness/Waza rule); keep the verification, risk-tier and writer-not-reviewer bits, skip the cheerleading.
 - [Evals are the most underrated skill](2026-10-29-evals-underrated-skill.md): 14-point eval playbook (error analysis, goldens, deterministic checks, trajectory/pass^k, CI gates); mchulet link is a repost of @divaagurlxw's list.
