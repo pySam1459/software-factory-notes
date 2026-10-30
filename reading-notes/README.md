@@ -6,6 +6,7 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 
 ## Index
 
+- [kaivectorf: Grok Bot teams promo and the Viktor release-desk article it quotes](2026-10-30-kaivectorf-grokbot-teams-hype.md): Hype post with a Grok Bot Galaxy video; keep the roles, skills and separate approval steps for the GHCP factory, and ignore the unverified salary and throughput claims.
 - [StarSling CI Playbooks](2026-10-30-starsling-ci-playbooks.md): 253 GitHub Actions speed-ups drawn from ten software factories, with an open ci-speedup skill; measure first and run less, rather than buying faster runners.
 - [Maze: codebase slop indicators](2026-10-29-maze-codebase-slop-indicators.md): Maze's checklist of agent-era code smells, mapped to GitHub Copilot reviewer skills, CI and pstack hard constraints.
 - [Ondrej's build, review, ship agent loop](2026-10-29-ondrej-build-review-ship.md): David Ondrej's three-phase agent flowchart (reproduce, independent read-only review, severity filter, re-review, post-merge loops), mapped to GitHub Copilot agents, skills, Automations, Memory and Actions plus pstack.
