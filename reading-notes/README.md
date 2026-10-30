@@ -6,6 +6,8 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 
 ## Index
 
+- [GitHub Agentic Workflows generally available](2026-10-30-github-agentic-workflows-ga.md): GitHub Next's Markdown agent workflows that compile to Actions reached GA on 28 Oct, with notes on the ADO version for the factory.
+- [Ben Holmes: self-improvement and benchmarking loops for a software factory](2026-10-30-bholmes-factory-two-loops.md): Warp's two factory loops, judging past chats to edit skills and replaying chats across models for cost, plus the open Skill Doctor skill.
 - [kaivectorf: Grok Bot teams promo and the Viktor release-desk article it quotes](2026-10-30-kaivectorf-grokbot-teams-hype.md): Hype post with a Grok Bot Galaxy video; keep the roles, skills and separate approval steps for the GHCP factory, and ignore the unverified salary and throughput claims.
 - [StarSling CI Playbooks](2026-10-30-starsling-ci-playbooks.md): 253 GitHub Actions speed-ups drawn from ten software factories, with an open ci-speedup skill; measure first and run less, rather than buying faster runners.
 - [Maze: codebase slop indicators](2026-10-29-maze-codebase-slop-indicators.md): Maze's checklist of agent-era code smells, mapped to GitHub Copilot reviewer skills, CI and pstack hard constraints.
