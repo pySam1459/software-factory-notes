@@ -1,6 +1,6 @@
 # Software factory notes
 
-Sam's personal notes on building an AI-agent 'software factory': AI-friendly codebase practices, advice collected from poteto (Lauren Tan), research on designing the always-on agent, and notes on posts and articles.
+Sam's personal notes on building an AI-agent 'software factory': AI-friendly codebase practices, advice collected from poteto (Lauren Tan), research on designing the always-on agent, notes on posts and articles, and formal methods and proofs (e.g. Lean) for AI-written code.
 
 ## poteto-advice
 
@@ -34,6 +34,12 @@ Notes on designing Sam's always-on agent and multi-bot system. Start at the [fol
 Short notes on interesting posts and articles. Start at the [folder README](reading-notes/README.md).
 
 - [Cheap code, precious trust](reading-notes/2026-10-26-cheap-code-precious-trust.md)
+
+## formal-verification
+
+Formal methods and proofs (e.g. Lean) for AI-written code. Start at the [folder README](formal-verification/README.md).
+
+- [Lean 4 derived C for the $12 server](formal-verification/2026-10-30-lean-twelve-dollar-server.md)
 
 ## How this repo is updated
 
