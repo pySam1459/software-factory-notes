@@ -6,6 +6,7 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 
 ## Index
 
+- [pstack panels and tstack council: multi-agent comparison burns tokens](2026-10-30-pstack-panel-token-cost.md): @cu30rry_ on panels as pstack's main token cost, linked to Theo's tstack council skill and pstack's cost settings.
 - [GitHub Agentic Workflows generally available](2026-10-30-github-agentic-workflows-ga.md): GitHub Next's Markdown agent workflows that compile to Actions reached GA on 28 Oct, with notes on the ADO version for the factory.
 - [Ben Holmes: self-improvement and benchmarking loops for a software factory](2026-10-30-bholmes-factory-two-loops.md): Warp's two factory loops, judging past chats to edit skills and replaying chats across models for cost, plus the open Skill Doctor skill.
 - [kaivectorf: Grok Bot teams promo and the Viktor release-desk article it quotes](2026-10-30-kaivectorf-grokbot-teams-hype.md): Hype post with a Grok Bot Galaxy video; keep the roles, skills and separate approval steps for the GHCP factory, and ignore the unverified salary and throughput claims.
