@@ -41,6 +41,10 @@ Formal methods and proofs (e.g. Lean) for AI-written code. Start at the [folder 
 
 - [Lean 4 derived C for the $12 server](formal-verification/2026-10-30-lean-twelve-dollar-server.md)
 
+## ux
+
+Agent UI component references (images from X posts and AffectUI) for designing agent frontends. Start at the [folder README](ux/README.md).
+
 ## How this repo is updated
 
 This is a notes repo. Changes are committed straight to `main`.
