@@ -6,6 +6,7 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 
 ## Index
 
+- [owengretzinger CI 20x](2026-10-31-owengretzinger-ci-20x.md): Boardy's CI speed-up playbook with its claims checked against Blacksmith, Oxlint, bun check and Linear; useful, with a big cost caveat.
 - [reanimate animation skill](2026-10-31-niazmorshed-reanimate.md): MIT Claude skill that clones motion from a URL or recording with frame-compare evidence.
 - [thenowhereway UI sites](2026-10-31-thenowhereway-ui-sites.md): five UI catalogs for vibe coders plus Avara, with factory relevance and top picks.
 - [Elephant-Goldfish Model (EGM)](2026-10-31-elephant-goldfish-model.md): @thisguyknowsai on Google's Apache-2.0 design-before-code plugin with Elephant drafts and fresh-context Goldfish reviewers.
