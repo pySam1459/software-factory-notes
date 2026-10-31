@@ -173,3 +173,16 @@ Embedded gallery (same files):
 ![affectui-tool-call-card](affectui-tool-call-card.jpg)
 
 ![affectui-trace-waterfall](affectui-trace-waterfall.jpg)
+
+---
+
+## @flohoeller
+
+- Handle: [@flohoeller](https://x.com/flohoeller)
+- Post: https://x.com/flohoeller/status/2116460582761107641
+- Text: "Scheduled Runs component, plan agent tasks around your usage limit"
+- Media: 1 video (preview frame saved). Same AffectUI component whose OG still was missing from the earlier category scrape (`/og/scheduled-runs.jpg` returned SPA HTML).
+
+Week planner for agent work against session capacity: left "To schedule" stack (GitHub/Notion/Slack-sourced cards with agent name and % of a 5-hour session), three-day calendar (Tue–Thu) with placed tasks and per-slot fill bars, Auto/Manual toggle, and model avatars in the header. Fits the AffectUI agents set beside inbox/lanes/plan cards.
+
+![flohoeller-1](flohoeller-1.jpg)
