@@ -186,3 +186,26 @@ Embedded gallery (same files):
 Week planner for agent work against session capacity: left "To schedule" stack (GitHub/Notion/Slack-sourced cards with agent name and % of a 5-hour session), three-day calendar (Tue–Thu) with placed tasks and per-slot fill bars, Auto/Manual toggle, and model avatars in the header. Fits the AffectUI agents set beside inbox/lanes/plan cards.
 
 ![flohoeller-1](flohoeller-1.jpg)
+
+---
+
+## @thenowhereway (UI catalogs)
+
+- Handle: [@thenowhereway](https://x.com/thenowhereway)
+- Post: https://x.com/thenowhereway/status/2116406644636864577
+- Text: five site links to stop apps looking AI-generated; thread also names Avara UI
+- Media: no post media; OG/marketing images fetched from each site
+
+Catalogs for prettier React/TS UI (not agent-runtime chrome). Full verdicts: `reading-notes/2026-10-31-thenowhereway-ui-sites.md`.
+
+![thenowhereway-21st-1](thenowhereway-21st-1.jpg)
+
+![thenowhereway-reactbits-1](thenowhereway-reactbits-1.jpg)
+
+![thenowhereway-magicui-1](thenowhereway-magicui-1.png)
+
+![thenowhereway-uiverse-1](thenowhereway-uiverse-1.png)
+
+![thenowhereway-mobbin-1](thenowhereway-mobbin-1.png)
+
+![thenowhereway-avaraui-1](thenowhereway-avaraui-1.png)

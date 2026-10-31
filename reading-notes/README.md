@@ -6,6 +6,8 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 
 ## Index
 
+- [reanimate animation skill](2026-10-31-niazmorshed-reanimate.md): MIT Claude skill that clones motion from a URL or recording with frame-compare evidence.
+- [thenowhereway UI sites](2026-10-31-thenowhereway-ui-sites.md): five UI catalogs for vibe coders plus Avara, with factory relevance and top picks.
 - [Elephant-Goldfish Model (EGM)](2026-10-31-elephant-goldfish-model.md): @thisguyknowsai on Google's Apache-2.0 design-before-code plugin with Elephant drafts and fresh-context Goldfish reviewers.
 - [evals-skills by Shreya Shankar and Hamel Husain](2026-10-30-evals-skills.md): Nine open skills for building product-specific LLM evals, how they fit Copilot skills, and which checks belong in Actions.
 - [@ashpreetbedi: three ways to improve agents](2026-10-30-ashpreetbedi-simulations-traces-evals.md): Simulations from the spec, mining real traces, and evals that lock in gains, with Agno's improve and create-evals skills as examples.
