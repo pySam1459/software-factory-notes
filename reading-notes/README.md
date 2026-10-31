@@ -6,6 +6,9 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 
 ## Index
 
+- [d4m1n hyping vercel-labs/agent-desktop](2026-10-31-d4m1n-agent-desktop.md): clickbait post, but the tool is real: open-source accessibility-tree computer use (about 4k stars, Apache-2.0); a candidate for a sandboxed desktop verify skill.
+- [KacperRutk: Dr Eggbot plus /grill-me](2026-10-31-kacperrutk-eggbot-grill-me.md): endorses poteto's Dr Eggbot with Matt Pocock's /grill-me skill; grill the bot's job first, then scaffold it.
+- [TiagerBao on Microsoft Agent Framework](2026-10-31-tiagerbao-ms-agent-framework.md): promo for microsoft/agent-framework; the repo is real (checkpoints, human approval, tracing) but a low fit beside GHCP and pstack.
 - [owengretzinger CI 20x](2026-10-31-owengretzinger-ci-20x.md): Boardy's CI speed-up playbook with its claims checked against Blacksmith, Oxlint, bun check and Linear; useful, with a big cost caveat.
 - [reanimate animation skill](2026-10-31-niazmorshed-reanimate.md): MIT Claude skill that clones motion from a URL or recording with frame-compare evidence.
 - [thenowhereway UI sites](2026-10-31-thenowhereway-ui-sites.md): five UI catalogs for vibe coders plus Avara, with factory relevance and top picks.
