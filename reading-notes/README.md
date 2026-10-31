@@ -6,6 +6,7 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 
 ## Index
 
+- [Voxyz CI audit prompt](2026-10-31-voxyz-ci-audit-prompt.md): a pasteable prompt for auditing CI with gh; the 40 min to 2 min table and the nine checks are taken from the @owengretzinger Boardy article without credit, so see the Owen note for the full playbook and cost.
 - [d4m1n hyping vercel-labs/agent-desktop](2026-10-31-d4m1n-agent-desktop.md): clickbait post, but the tool is real: open-source accessibility-tree computer use (about 4k stars, Apache-2.0); a candidate for a sandboxed desktop verify skill.
 - [KacperRutk: Dr Eggbot plus /grill-me](2026-10-31-kacperrutk-eggbot-grill-me.md): endorses poteto's Dr Eggbot with Matt Pocock's /grill-me skill; grill the bot's job first, then scaffold it.
 - [TiagerBao on Microsoft Agent Framework](2026-10-31-tiagerbao-ms-agent-framework.md): promo for microsoft/agent-framework; the repo is real (checkpoints, human approval, tracing) but a low fit beside GHCP and pstack.
