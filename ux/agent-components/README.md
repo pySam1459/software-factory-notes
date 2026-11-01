@@ -209,3 +209,16 @@ Catalogs for prettier React/TS UI (not agent-runtime chrome). Full verdicts: `re
 ![thenowhereway-mobbin-1](thenowhereway-mobbin-1.png)
 
 ![thenowhereway-avaraui-1](thenowhereway-avaraui-1.png)
+
+---
+
+## @odysseus0z
+
+- Handle: [@odysseus0z](https://x.com/odysseus0z)
+- Post: https://x.com/odysseus0z/status/2116711444893069528
+- Text: personal agents converge on a router plus workers; generative UI is the predicted next step because chat is low bandwidth
+- Media: no images on the post; GitHub social card for the linked repo
+
+Open Graph card for [deepseek-ai/dsh-superagent-prototype](https://github.com/deepseek-ai/dsh-superagent-prototype): repo name, "Towards a More Autonomous Agent System", DeepSeek whale, and contributor/issue/star/fork counts (1k stars, 79 forks). Full note: [../2026-11-01-odysseus0z-attention-bottleneck-gen-ui.md](../2026-11-01-odysseus0z-attention-bottleneck-gen-ui.md).
+
+![odysseus0z-attention-bottleneck-gh-card](2026-11-01-odysseus0z-attention-bottleneck-gh-card.jpg)
