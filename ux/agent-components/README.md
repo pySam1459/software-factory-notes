@@ -176,7 +176,7 @@ Embedded gallery (same files):
 
 ---
 
-## @iliasconfidency (CarePath)
+## @iliasconfidency (CarePath, agent activity log)
 
 - Handle: [@iliasconfidency](https://x.com/iliasconfidency)
 - Post: https://x.com/iliasconfidency/status/2117278058906263806
@@ -190,6 +190,20 @@ Design concept with mock data: AI fax referral extraction that highlights each v
 ![Extraction panel](2026-11-02-iliasconfidency-carepath-extraction-panel.jpg)
 
 ![Full layout](2026-11-02-iliasconfidency-carepath-full-layout.jpg)
+
+### Agent activity log and undo (same author)
+
+- Post: https://x.com/iliasconfidency/status/2117134618545553854
+- Note: [../2026-11-02-iliasconfidency-agent-activity-undo.md](../2026-11-02-iliasconfidency-agent-activity-undo.md)
+- Media: ffmpeg stills from the 18 s design demo (scaled to max 1600 px wide)
+
+Agents and policies dashboard (Acts on its own vs Always asks you, Pause all agents, % cleared by policies); leasing-agent playbook and voice config; unified activity log of agents and people with source pills, Cleared by policy, Undo, and an audit and retention panel. Design concept with mock data.
+
+![2026-11-02-iliasconfidency-activity-dashboard](2026-11-02-iliasconfidency-activity-dashboard.jpg)
+
+![2026-11-02-iliasconfidency-activity-playbook](2026-11-02-iliasconfidency-activity-playbook.jpg)
+
+![2026-11-02-iliasconfidency-activity-log](2026-11-02-iliasconfidency-activity-log.jpg)
 
 ---
 
