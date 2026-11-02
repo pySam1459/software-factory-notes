@@ -222,3 +222,20 @@ Catalogs for prettier React/TS UI (not agent-runtime chrome). Full verdicts: `re
 Open Graph card for [deepseek-ai/dsh-superagent-prototype](https://github.com/deepseek-ai/dsh-superagent-prototype): repo name, "Towards a More Autonomous Agent System", DeepSeek whale, and contributor/issue/star/fork counts (1k stars, 79 forks). Full note: [../2026-11-01-odysseus0z-attention-bottleneck-gen-ui.md](../2026-11-01-odysseus0z-attention-bottleneck-gen-ui.md).
 
 ![odysseus0z-attention-bottleneck-gh-card](2026-11-01-odysseus0z-attention-bottleneck-gh-card.jpg)
+
+---
+
+## @afomera (Maple Factory)
+
+- Handle: [@afomera](https://x.com/afomera)
+- Post: https://x.com/afomera/status/2117064694888599772
+- Text: tour of Software Factory (v2); name reveal Maple Factory, inspired by boiling sap into syrup
+- Media: ~11 min amplify video; three ffmpeg stills saved (review inbox, change walkthrough, statistics)
+
+Mac inbox for task MF-341 ("iOS: Settings as an iOS-style menu"): Done When proofs (FeedStateTests, SettingsMenuTests, screenshot), Ready to Merge checklist, and Approve changes. Change walkthrough modal with light and dark iPhone mockups (Settings, Repositories, People, Secrets, Merging). Statistics dashboard for the last 24 hours (Merged 102, Cycle time 50m, Hands raised 66, and related charts); treat the numbers as self-reported. Full note: [../2026-11-02-afomera-maple-factory.md](../2026-11-02-afomera-maple-factory.md).
+
+![2026-11-02-afomera-maple-review-inbox](2026-11-02-afomera-maple-review-inbox.jpg)
+
+![2026-11-02-afomera-maple-change-walkthrough](2026-11-02-afomera-maple-change-walkthrough.jpg)
+
+![2026-11-02-afomera-maple-statistics](2026-11-02-afomera-maple-statistics.jpg)
