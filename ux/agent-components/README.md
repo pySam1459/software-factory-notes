@@ -205,6 +205,23 @@ Agents and policies dashboard (Acts on its own vs Always asks you, Pause all age
 
 ![2026-11-02-iliasconfidency-activity-log](2026-11-02-iliasconfidency-activity-log.jpg)
 
+### Limit-change replay (same author)
+
+- Post: https://x.com/iliasconfidency/status/2117104415438168563
+- Note: [../2026-11-02-iliasconfidency-limit-change-replay.md](../2026-11-02-iliasconfidency-limit-change-replay.md)
+- Media: ffmpeg stills from the ~19 s design demo (scaled to max 1600 px wide)
+
+Before an approval limit changes, the product replays the last 90 days: live clear-on-their-own count, waiting time saved, and per-request Would clear / Still asks pills. Change is sent to the owner and applies only after they confirm. Design concept with mock data.
+
+![iliasconfidency-replay-properties](iliasconfidency-replay-properties.jpg)
+
+![iliasconfidency-replay-policy](iliasconfidency-replay-policy.jpg)
+
+![iliasconfidency-replay-backtest](iliasconfidency-replay-backtest.jpg)
+
+![iliasconfidency-replay-pending](iliasconfidency-replay-pending.jpg)
+
+
 ---
 
 ## @flohoeller
@@ -214,7 +231,7 @@ Agents and policies dashboard (Acts on its own vs Always asks you, Pause all age
 - Text: "Scheduled Runs component, plan agent tasks around your usage limit"
 - Media: 1 video (preview frame saved). Same AffectUI component whose OG still was missing from the earlier category scrape (`/og/scheduled-runs.jpg` returned SPA HTML).
 
-Week planner for agent work against session capacity: left "To schedule" stack (GitHub/Notion/Slack-sourced cards with agent name and % of a 5-hour session), three-day calendar (Tue–Thu) with placed tasks and per-slot fill bars, Auto/Manual toggle, and model avatars in the header. Fits the AffectUI agents set beside inbox/lanes/plan cards.
+Week planner for agent work against session capacity: left "To schedule" stack (GitHub/Notion/Slack-sourced cards with agent name and % of a 5-hour session), three-day calendar (Tue-Thu) with placed tasks and per-slot fill bars, Auto/Manual toggle, and model avatars in the header. Fits the AffectUI agents set beside inbox/lanes/plan cards.
 
 ![flohoeller-1](flohoeller-1.jpg)
 
@@ -288,3 +305,21 @@ Mac inbox for task MF-341 ("iOS: Settings as an iOS-style menu"): Done When proo
 ![2026-11-02-afomera-maple-change-walkthrough](2026-11-02-afomera-maple-change-walkthrough.jpg)
 
 ![2026-11-02-afomera-maple-statistics](2026-11-02-afomera-maple-statistics.jpg)
+
+---
+
+## @jubayer6910 (Auton approvals)
+
+- Handle: [@jubayer6910](https://x.com/jubayer6910)
+- Post: https://x.com/jubayer6910/status/2117217662703190032
+- Text: "aproovals flow of auton."
+- Media: static four-panel mock; 1600 px overview plus two quadrant crops
+- Note: [../2026-11-02-jubayer6910-auton-approvals.md](../2026-11-02-jubayer6910-auton-approvals.md)
+
+Approvals queue for agent permission escalations: Pending/Approved/Denied with risk pills; detail pane with agent's reason, scope diff (Needs approval / Auto-allowed / Unchanged), risk signals, and a two-person approval chain. Approve with limits (single use / time window, narrower scopes, deploy-runner only). Ask the agent inline. Deny with reason chips, note to the agent, block identical requests, optional pause. Design mock; mock people's names omitted from the note.
+
+![jubayer6910-auton-overview](jubayer6910-auton-overview.jpg)
+
+![jubayer6910-auton-approve-limits](jubayer6910-auton-approve-limits.jpg)
+
+![jubayer6910-auton-deny](jubayer6910-auton-deny.jpg)
