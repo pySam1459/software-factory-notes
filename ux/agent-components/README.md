@@ -187,6 +187,24 @@ Week planner for agent work against session capacity: left "To schedule" stack (
 
 ![flohoeller-1](flohoeller-1.jpg)
 
+**Agent Fleet** (later post; four ffmpeg stills, not an OG card):
+
+- Post: https://x.com/flohoeller/status/2117239965352427754
+- Component: https://affectui.com/components/agent-fleet
+- Text: "Agent Fleet component, every agent and its sub-agents in one view"
+- Media: ~15 s amplify video; light default, task popover, approve popover, dark mode
+- Note: [../2026-11-02-flohoeller-agent-fleet.md](../2026-11-02-flohoeller-agent-fleet.md)
+
+Two-level fleet tree: lead cards with one sub-agent tree open, Needs you, inline Approve/Reject, and per-agent cost and time. Pro page on affectui.com.
+
+![Light default: Launch lead tree open, Writer Needs you](2026-11-02-flohoeller-agent-fleet-light-default.jpg)
+
+![Task popover: Support lead tree, Billing tasks](2026-11-02-flohoeller-agent-fleet-task-popover.jpg)
+
+![Approve popover: Writer answer with Reject and Approve](2026-11-02-flohoeller-agent-fleet-approve-popover.jpg)
+
+![Dark mode: after approve, eight running, Support tree open](2026-11-02-flohoeller-agent-fleet-dark-mode.jpg)
+
 ---
 
 ## @thenowhereway (UI catalogs)
