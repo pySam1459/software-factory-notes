@@ -176,6 +176,23 @@ Embedded gallery (same files):
 
 ---
 
+## @iliasconfidency (CarePath)
+
+- Handle: [@iliasconfidency](https://x.com/iliasconfidency)
+- Post: https://x.com/iliasconfidency/status/2117278058906263806
+- Text: "AI that reads a fax should show its work."
+- Media: ~17 s amplify video; three ffmpeg stills saved (source highlights, extraction panel, full layout)
+
+Design concept with mock data: AI fax referral extraction that highlights each value on the source, splits verified from needs-your-eyes with a best guess and reason. Full note: [../2026-11-02-iliasconfidency-carepath-show-your-work.md](../2026-11-02-iliasconfidency-carepath-show-your-work.md).
+
+![Source highlights](2026-11-02-iliasconfidency-carepath-source-highlights.jpg)
+
+![Extraction panel](2026-11-02-iliasconfidency-carepath-extraction-panel.jpg)
+
+![Full layout](2026-11-02-iliasconfidency-carepath-full-layout.jpg)
+
+---
+
 ## @flohoeller
 
 - Handle: [@flohoeller](https://x.com/flohoeller)

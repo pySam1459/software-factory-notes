@@ -6,6 +6,7 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 
 ## Index
 
+- [GitHub Actions rounds every job up to a whole minute (@DanielLockyer)](2026-11-02-daniellockyer-actions-minute-rounding.md): verified against GitHub docs; combine short jobs and use native parallel steps; keep flaky jobs separate.
 - [karpathy HackerTube](2026-11-01-karpathy-hackertube.md): agent-built HN-recommended YouTube browser plus forkable data zip; factory lessons on cheap filters, data packs, and human secret and deploy gates.
 - [luhsnaa agent evals map](2026-11-01-luhsnaa-agent-evals.md): 80/20 agent-evals roadmap plus Loopbreak playground; maps to GHCP golden datasets, pass^k Actions checks, and judge TPR/TNR.
 - [Ray Amjad on Claude Code verifiers](2026-11-01-ray-amjad-claude-code-verifiers.md): own the plan and an answer-key verifier rather than trusting agent-written tests; the Anthropic shadow traffic and Bun test suite examples check out; Prove It skills (MIT, beta); useful for GHCP, with hype caveats.
