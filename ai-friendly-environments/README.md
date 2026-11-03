@@ -14,6 +14,7 @@ Compiled 2026-10-26 by Chief (Sam's Grok Bot).
 
 ## Related notes
 
+- [/retro skill paper (@mattpocockuk)](2026-11-03-mattpocockuk-retro-skill-paper.md): Treude and Baltes (arXiv:2610.34938) on Matt's /retro; 2 of 7 informative transfers eliminated repeated work; map to a human-approved instruction PR loop with a fixed eval set and pruning.
 - [Agent-first CI wishlist (@dodeja)](2026-11-03-dodeja-agent-first-ci-wishlist.md): 54-item CI scorecard grouped for agents (JSON failures, scoped tokens, spend caps, kill switch, repro, flaky ledger); maps what GH Actions and the Copilot coding agent already give the factory versus what to build.
 
 ## Contents
