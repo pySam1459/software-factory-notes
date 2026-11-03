@@ -1,6 +1,6 @@
 # poteto's advice on working with agents
 
-Notes on what Lauren Tan ([@poteto](https://x.com/poteto)) has said about getting agents to do trustworthy work. She has said she shipped about 2,000–2,500 PRs a month this way, and the notes cover the X posts and replies, interviews and talks behind that, plus her pstack plugin. Also covered: how to apply it as a frontend-heavy engineer on the Microsoft Copilot team, where GitHub Copilot is the agent, the repos are on Azure DevOps (ADO), and the codebase is huge and legacy.
+Notes on what Lauren Tan ([@poteto](https://x.com/poteto)) has said about getting agents to do trustworthy work. She has said she shipped about 2,000 to 2,500 PRs a month this way, and the notes cover the X posts and replies, interviews and talks behind that, plus her pstack plugin. Also covered: how to apply it as a frontend-heavy engineer on the Microsoft Copilot team, where GitHub Copilot is the agent, the repos are on Azure DevOps (ADO), and the codebase is huge and legacy.
 
 Compiled 2026-10-26 by Chief (Sam's Grok Bot). X data runs up to 26 Oct 2026, 08:25 UK time.
 
@@ -14,6 +14,7 @@ Compiled 2026-10-26 by Chief (Sam's Grok Bot). X data runs up to 26 Oct 2026, 08
 
 ## Index
 
+- [2026-11-03-_nogu66-pstack-automate-me.md](2026-11-03-_nogu66-pstack-automate-me.md): @_nogu66 on valuing /automate-me over only /poteto-mode; what the skill mines and writes; GHCP personal-mode bootstrap with reviewed PRs and a retro-style eval.
 - [2026-10-31-grok-bot-team-guide.md](2026-10-31-grok-bot-team-guide.md): poteto's 31 Oct Grok Bot team guide: few bots, skills in a private repo, vault and connectors, routines, scripts over tokens, voice notes then "restate", plus Dr Eggbot
 - [poteto (Lauren Tan) workshop: trust, verification and hard constraints](../reading-notes/2026-10-28-poteto-agent-team-workshop.md): trust vs number of agents; verification skills so you are not the bottleneck; hard constraints (lint, CI, Dune) beat soft rules.
 
@@ -24,7 +25,7 @@ Compiled 2026-10-26 by Chief (Sam's Grok Bot). X data runs up to 26 Oct 2026, 08
 | [compilation/core-principles.md](compilation/core-principles.md) | The trust bottleneck and verification first, the codebase as memory, the inverse pyramid, context not control, stop the bleeding, banning comments and `useEffect`, feature maps, short skills with evals, readiness metrics, plus Minsky's points |
 | [compilation/tooling.md](compilation/tooling.md) | pstack (`/poteto-mode`, `/setup-pstack`, `/correct` in detail, the full skill list), verification skills, Chrome DevTools, Grok Bot and cloud agents |
 | [compilation/applying-at-microsoft.md](compilation/applying-at-microsoft.md) | Mapping it onto GitHub Copilot and ADO: skills, instructions, hooks and `preToolUse`; headless Copilot CLI, the ADO MCP server and pipeline schedules; scoping to the folders Sam owns; the `bots/` thin-layer design and diagram |
-| [compilation/tips-from-posts.md](compilation/tips-from-posts.md) | Tips and prompts from her X posts, 14 Sep – 26 Oct 2026, by theme |
+| [compilation/tips-from-posts.md](compilation/tips-from-posts.md) | Tips and prompts from her X posts, 14 Sep to 26 Oct 2026, by theme |
 | [compilation/new-since-2026-10-23.md](compilation/new-since-2026-10-23.md) | What's new between 23 and 26 Oct 2026 |
 
 ### Raw material
@@ -41,7 +42,7 @@ The companion repo `../ai-friendly-environments` turns this into concrete config
 
 **Talks and interviews**
 
-- "How I Shipped 2000 PRs Last Month — Trusting AI Agents" (talk): <https://www.youtube.com/watch?v=NjoZoUm85x0>. She posted the 2,500-PR version on X on 21 Sep: <https://x.com/poteto/status/2102050467505430555>
+- "How I Shipped 2000 PRs Last Month, Trusting AI Agents" (talk): <https://www.youtube.com/watch?v=NjoZoUm85x0>. She posted the 2,500-PR version on X on 21 Sep: <https://x.com/poteto/status/2102050467505430555>
 - Matt Pocock livestream, "Poteto (creator of pstack) on shipping 1,000's of PR's a month at SpaceX": <https://www.youtube.com/watch?v=MN9dGgmLyso>
 - Live session with Q&A (chapters on the trust curve, verification, pstack, evals, cloud agents, architecture, CI): `raw/transcripts/live-session-lauren-tan-trust-curve-verification-dune.txt`. The URL was not recorded.
 - Ron Minsky, "Now more than ever: building reliable software in the age of agents" (Bug Bash 2026), recommended by poteto on 26 Oct: <https://www.youtube.com/watch?v=rUYP4C29yCw>
