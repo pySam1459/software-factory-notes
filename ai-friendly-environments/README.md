@@ -12,6 +12,10 @@ Compiled 2026-10-26 by Chief (Sam's Grok Bot).
 - **Ron Minsky** (Jane Street), in the talk "Now more than ever: building reliable software in the age of agents" (Bug Bash 2026). His points: expect tests, making illegal states unrepresentable, property tests and deterministic simulation, and formal methods getting cheaper.
 - **Chief's own suggestions** are marked **[Chief]**. These cover the concrete Copilot/ADO wiring, the scripts, most of the config detail and the hygiene rules. Treat them as proposals, not as anyone's quoted advice.
 
+## Related notes
+
+- [Agent-first CI wishlist (@dodeja)](2026-11-03-dodeja-agent-first-ci-wishlist.md): 54-item CI scorecard grouped for agents (JSON failures, scoped tokens, spend caps, kill switch, repro, flaky ledger); maps what GH Actions and the Copilot coding agent already give the factory versus what to build.
+
 ## Contents
 
 | File | What it covers |
