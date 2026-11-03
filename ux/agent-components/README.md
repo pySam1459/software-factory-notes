@@ -323,3 +323,19 @@ Approvals queue for agent permission escalations: Pending/Approved/Denied with r
 ![jubayer6910-auton-approve-limits](jubayer6910-auton-approve-limits.jpg)
 
 ![jubayer6910-auton-deny](jubayer6910-auton-deny.jpg)
+
+---
+
+## @nizamdesign (Fixora dashboard)
+
+- Handle: [@nizamdesign](https://x.com/nizamdesign)
+- Post: https://x.com/nizamdesign/status/2117102302704312780
+- Text: "Dark mode or Light mode? Which one wins for Fixora?"
+- Media: two static mocks (dark and light); grey surround cropped, max 1600 px wide
+- Note: [../2026-11-03-nizamdesign-fixora-dashboard.md](../2026-11-03-nizamdesign-fixora-dashboard.md)
+
+Property maintenance ops home: needs-attention header, KPI deltas, opened-vs-resolved backlog gap, hex health heatmap, Fixora AI insights card (evidence, risk %, cost if fails vs service now, Schedule service), recent activity. Same layout in dark and light (shared tokens). Design mock; mock people's names omitted from the note.
+
+![nizamdesign-fixora-dark](nizamdesign-fixora-dark.jpg)
+
+![nizamdesign-fixora-light](nizamdesign-fixora-light.jpg)

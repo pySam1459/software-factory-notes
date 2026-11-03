@@ -4,6 +4,7 @@ Agent UI component references for designing agent frontends (for example the Typ
 
 ## Notes
 
+- [Fixora dashboard (@nizamdesign)](2026-11-03-nizamdesign-fixora-dashboard.md): ops home with needs-attention count, backlog-gap chart, health heatmap, and an AI insight card (evidence, risk, cost of acting vs not, one primary action); dark and light share tokens.
 - [Limit-change replay (@iliasconfidency)](2026-11-02-iliasconfidency-limit-change-replay.md): before widening an approval limit, replay the last 90 days with Would clear / Still asks, then wait for the owner to confirm.
 - [Auton approvals flow (@jubayer6910)](2026-11-02-jubayer6910-auton-approvals.md): agent permission escalations with scope diff, approve-with-limits, ask-the-agent, and deny-with-reason chips.
 - [Agent activity log and undo (@iliasconfidency)](2026-11-02-iliasconfidency-agent-activity-undo.md): Acts on its own vs Always asks you, % cleared by policy, unified agent and people log with sources and typed Undo.
