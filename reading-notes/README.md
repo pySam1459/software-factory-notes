@@ -6,6 +6,7 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 
 ## Index
 
+- [Dependabot adds APM version updates (@OrenMe)](2026-11-03-OrenMe-apm-dependabot.md): Dependabot package-ecosystem apm for apm.yml / apm.lock.yaml; JFrog, Renovate and gh-aw APM claims check out; manage factory skills/agents as locked deps with eval gates on bumps.
 - [dave_deguzza Playwright Chromium cleanup](2026-11-03-dave_deguzza-playwright-chromium-cleanup.md): Chrome 156.0.8078.73 security train is real; clean stale Playwright/Puppeteer Chromiums, point MCP at --browser chrome --sandbox, and scope destructive agent deletes (per @nkozyra).
 - [GitHub Actions rounds every job up to a whole minute (@DanielLockyer)](2026-11-02-daniellockyer-actions-minute-rounding.md): verified against GitHub docs; combine short jobs and use native parallel steps; keep flaky jobs separate.
 - [karpathy HackerTube](2026-11-01-karpathy-hackertube.md): agent-built HN-recommended YouTube browser plus forkable data zip; factory lessons on cheap filters, data packs, and human secret and deploy gates.
