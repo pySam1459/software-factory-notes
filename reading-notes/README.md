@@ -6,6 +6,7 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 
 ## Index
 
+- [UI hill climb with a model council (@kaelig, after @theo)](2026-11-05-kaelig-ui-hill-climb-council.md): Mercury prototyping run grading 800+ screenshots with Claude/Codex after Theo's T3 Code UI hill climb; keep multi-judge + defence rounds, token caps and a human taste gate on GHCP.
 - [Don't vibe code your software factory (@zachlloydtweets)](2026-11-04-zachlloydtweets-dont-vibe-code-your-factory.md): Warp founder on factories as production infra (factory-as-code, orchestration, evals, headless integrations); vendor pitch, but the four-layer checklist maps cleanly onto GHCP with hermetic replay and model A/B still to build.
 - [Dependabot adds APM version updates (@OrenMe)](2026-11-03-OrenMe-apm-dependabot.md): Dependabot package-ecosystem apm for apm.yml / apm.lock.yaml; JFrog, Renovate and gh-aw APM claims check out; manage factory skills/agents as locked deps with eval gates on bumps.
 - [dave_deguzza Playwright Chromium cleanup](2026-11-03-dave_deguzza-playwright-chromium-cleanup.md): Chrome 156.0.8078.73 security train is real; clean stale Playwright/Puppeteer Chromiums, point MCP at --browser chrome --sandbox, and scope destructive agent deletes (per @nkozyra).
