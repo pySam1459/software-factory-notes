@@ -6,6 +6,7 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 
 ## Index
 
+- [CI and sandbox costs (@CalvinGrunewald)](2026-11-07-CalvinGrunewald-ci-sandbox-costs.md): AI-prepared runner-rate table and self-reported 10x bill; reduce repeated CI before DIY compute, preserve verification, and budget Actions separately from Copilot AI usage.
 - [Software factory as signal-to-ship control loop (@EnoReyes)](2026-11-06-EnoReyes-software-factory-diagram.md): Factory CTO diagram (signals to ship with governance and prod feedback); broadly agrees with @poteto's engineering priorities, and argues the factory category is real and under-built.
 - [Latent Space factory stack walkthrough (@zachlloydtweets × @swyx)](2026-11-05-zachlloydtweets-swyx-factory-stack.md): live Warp Factories demo plus self-reported $80 to $15-20/PR; episode adds fit criteria, WarpBench, and subs-vs-API pushback beyond the article.
 - [UI hill climb with a model council (@kaelig, after @theo)](2026-11-05-kaelig-ui-hill-climb-council.md): Mercury prototyping run grading 800+ screenshots with Claude/Codex after Theo's T3 Code UI hill climb; keep multi-judge + defence rounds, token caps and a human taste gate on GHCP.
