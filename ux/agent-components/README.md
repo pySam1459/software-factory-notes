@@ -339,3 +339,20 @@ Property maintenance ops home: needs-attention header, KPI deltas, opened-vs-res
 ![nizamdesign-fixora-dark](nizamdesign-fixora-dark.jpg)
 
 ![nizamdesign-fixora-light](nizamdesign-fixora-light.jpg)
+
+## @kevinkern (needs-you decision inbox)
+
+- Video post: https://x.com/kevinkern/status/2119134370158284875
+- Quoted screenshot: https://x.com/kevinkern/status/2118477900899082416
+- Note: [../2026-11-08-kevinkern-needs-you-inbox.md](../2026-11-08-kevinkern-needs-you-inbox.md)
+- Media: three checked ffmpeg frames at 0, 2 and 18 seconds from 2204x1080 video, scaled to 1600px wide, plus original quoted screenshot. Mock/demo data.
+
+Cross-project decision inbox with priority filters, context, consequences, per-option model notes, bulk recommendations and a sending countdown with Undo. Final filtered empty state does not mean all work is done. Content partly from video-model analysis checked against stills; machine label gaming-pc, active model Opus 5.5, right-side Queue and keyboard footer corrected by direct inspection. No app name established by the author's recovered replies.
+
+![Opening layout](2026-11-08-kevinkern-needs-you-00.jpg)
+
+![Sending countdown and Undo](2026-11-08-kevinkern-needs-you-02.jpg)
+
+![Filtered empty state and pending answer queue](2026-11-08-kevinkern-needs-you-18.jpg)
+
+![Quoted screenshot with reviewed options](2026-11-08-kevinkern-needs-you-quoted.jpg)
