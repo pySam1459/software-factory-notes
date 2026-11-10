@@ -6,6 +6,7 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 
 ## Index
 
+- [Lessons from running a software factory (@andrestaltz)](2026-11-10-andrestaltz-software-factory-lessons.md): talk summary on narrow, fail-closed agents and systematic bot review; opinions only, and "objective" is contested.
 - [agent-browser compact browser CLI (@blob16exe)](2026-11-08-blob16exe-agent-browser.md): Rust snapshot/ref loop and version-matched skills check out; 93% is a launch claim, one cited issue is closed, and GHCP already has Playwright MCP.
 - [Long-lived data, short-lived code (@smehmood)](2026-11-08-smehmood-choreography-over-durable-workflows.md): Niteshift prototype favours choreography over durable workflows; replay friction is real, but migrations, idempotency and causal audit trails remain.
 - [CI and sandbox costs (@CalvinGrunewald)](2026-11-07-CalvinGrunewald-ci-sandbox-costs.md): AI-prepared runner-rate table and self-reported 10x bill; reduce repeated CI before DIY compute, preserve verification, and budget Actions separately from Copilot AI usage.
