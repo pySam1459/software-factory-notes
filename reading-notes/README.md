@@ -6,6 +6,7 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 
 ## Index
 
+- [Always-on agents sleep between short runs (@TekonBurns)](2026-11-13-TekonBurns-always-on-agents.md): A summary of Anthropic's always-on-agents guide (inbox, timers, memory, permissions, outbox); the post is mostly accurate, and the important gaps are retries, single-writer locks, and a reviewable dreaming pass.
 - [Three levers to cut review time on agent PRs (@BHolmesDev)](2026-11-13-BHolmesDev-three-review-levers.md): Warp's Factory Foreman on adversarial pre-review, end-to-end flow checks, and a scored merge-risk skill; the skill grades five dimensions and lists gaps, and Warp has not shown that mixing models helps.
 - [One account per agent, and what that does not fix (@berman66)](2026-11-11-berman66-agent-identity.md): A Runlayer pitch for a native identity per agent; the 130-MCP story is an unnamed anecdote, and the thread stresses short-lived scope, expiry and revocation, not just a cleaner audit log.
 - [Folder setup that is meant to stop lazy "fixed" claims (@bebuu_ai)](2026-11-11-bebuu_ai-claude-harness.md): The Stop hook wiring is real, but scripts/verify.sh and format.sh are stubs that always exit 0, MEMORY.md is five static bullets, and Copilot does have hooks that can block a turn (JSON decision, not exit 2).
