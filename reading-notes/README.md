@@ -6,6 +6,7 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 
 ## Index
 
+- [Make agents complain about the codebase (@kentcdodds)](2026-11-15-kentcdodds-agents-complain.md): Ask agents, at the end of a task, what slowed them down; his autopilot video (122 PRs in 24 hours, self-reported) files that friction after merge, and the useful replies are to mine silent retries, count repeats, and route fixes to skills rather than notes.
 - [Always-on agents sleep between short runs (@TekonBurns)](2026-11-13-TekonBurns-always-on-agents.md): A summary of Anthropic's always-on-agents guide (inbox, timers, memory, permissions, outbox); the post is mostly accurate, and the important gaps are retries, single-writer locks, and a reviewable dreaming pass.
 - [Three levers to cut review time on agent PRs (@BHolmesDev)](2026-11-13-BHolmesDev-three-review-levers.md): Warp's Factory Foreman on adversarial pre-review, end-to-end flow checks, and a scored merge-risk skill; the skill grades five dimensions and lists gaps, and Warp has not shown that mixing models helps.
 - [One account per agent, and what that does not fix (@berman66)](2026-11-11-berman66-agent-identity.md): A Runlayer pitch for a native identity per agent; the 130-MCP story is an unnamed anecdote, and the thread stresses short-lived scope, expiry and revocation, not just a cleaner audit log.
