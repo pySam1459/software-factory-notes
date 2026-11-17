@@ -6,6 +6,7 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 
 ## Index
 
+- [A prompt to get CI under two minutes (@pontusab)](2026-11-15-pontusab-ci-under-2-minutes.md): A reusable agent prompt (p50 under 2 min, full suite in the merge queue) after a self-reported frontend CI win; the checklist matches the earlier Boardy playbook, and he did not publish a cold-cache number.
 - [Make agents complain about the codebase (@kentcdodds)](2026-11-15-kentcdodds-agents-complain.md): Ask agents, at the end of a task, what slowed them down; his autopilot video (122 PRs in 24 hours, self-reported) files that friction after merge, and the useful replies are to mine silent retries, count repeats, and route fixes to skills rather than notes.
 - [Always-on agents sleep between short runs (@TekonBurns)](2026-11-13-TekonBurns-always-on-agents.md): A summary of Anthropic's always-on-agents guide (inbox, timers, memory, permissions, outbox); the post is mostly accurate, and the important gaps are retries, single-writer locks, and a reviewable dreaming pass.
 - [Three levers to cut review time on agent PRs (@BHolmesDev)](2026-11-13-BHolmesDev-three-review-levers.md): Warp's Factory Foreman on adversarial pre-review, end-to-end flow checks, and a scored merge-risk skill; the skill grades five dimensions and lists gaps, and Warp has not shown that mixing models helps.
