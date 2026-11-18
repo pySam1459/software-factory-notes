@@ -123,11 +123,9 @@ For Electron you can attach to `--remote-debugging-port`.
 ## Formal verification and statecharts
 
 - **`/create-formal-verification-skill`** ([18 Oct](https://x.com/poteto/status/2111926622278521253)): "a meta-skill that creates a new skill and formal verification suite". Examples: TLA+ for state machines and concurrency, kani in Rust for undefined behaviour. "i've been experimenting with modeling our code with TLA+ and have already found several bugs".
-- **Statecharts** ([21 Oct](https://x.com/poteto/status/2112736749281759566), [22 Oct](https://x.com/poteto/status/2113398433977659654)): render TLA+ models as statecharts a PM or reviewer can read. Built with Pele by @kepano. The released skill (`/statechart`) works both ways:
-  - `from-spec`: TLA+ → chart
-  - `from-chart`: an agreed chart → TLA+ skeleton, then check the code against it
+- **Statecharts** ([21 Oct](https://x.com/poteto/status/2112736749281759566), [22 Oct](https://x.com/poteto/status/2113398433977659654)): render TLA+ models as statecharts a PM or reviewer can read. Built with Pele by @kepano. The 22 Oct posts described the released skill (`/statechart`) as working both ways (`from-spec`, TLA+ to chart, and `from-chart`, an agreed chart to a TLA+ skeleton).
 
-  Its first run installs TLC and Java with mise (about 305 MB).
+  **Update (8 Nov 2026):** the current SKILL.md does not promise the chart-to-spec direction. It writes a TLA+ spec and config, runs TLC, and produces `report.md`, a Mermaid `chart.mmd` and TLC logs; it checks stated rules and reports counterexample paths. First use installs Java and TLC through mise. See [Find state machines, check their rules, then show the flows](../2026-11-08-poteto-formal-verification-statecharts.md).
 - Long term, she is betting on languages where proofs live with the code (Bend; Rust + Verus). See [new-since-2026-10-23.md](new-since-2026-10-23.md).
 
 ## Evals for skills

@@ -1,6 +1,6 @@
 # poteto's advice on working with agents
 
-Notes on what Lauren Tan ([@poteto](https://x.com/poteto)) has said about getting agents to do trustworthy work. She has said she shipped about 2,000 to 2,500 PRs a month this way, and the notes cover the X posts and replies, interviews and talks behind that, plus her pstack plugin. Also covered: how to apply it as a frontend-heavy engineer on the Microsoft Copilot team, where GitHub Copilot is the agent, the repos are on Azure DevOps (ADO), and the codebase is huge and legacy.
+Notes on what Lauren Tan ([@poteto](https://x.com/poteto)) has said about getting agents to do trustworthy work. She has said she shipped about 2,000 to 2,500 PRs a month this way (her talk and a 21 Sep post); her 11 Nov talk slide shows 3,127 PRs in October and 10,732 from March to October, all self-reported (see [All code is slop (except mine)](2026-11-11-poteto-all-code-is-slop.md)), and the notes cover the X posts and replies, interviews and talks behind that, plus her pstack plugin. Also covered: how to apply it as a frontend-heavy engineer on the Microsoft Copilot team, where GitHub Copilot is the agent, the repos are on Azure DevOps (ADO), and the codebase is huge and legacy.
 
 Compiled 2026-10-26 by Chief (Sam's Grok Bot). X data runs up to 26 Oct 2026, 08:25 UK time.
 

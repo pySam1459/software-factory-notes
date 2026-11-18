@@ -11,7 +11,7 @@ Exception: PostHog's open Jeeves 9B reasons before deciding.
 - System1-Arena (https://arxiv.org/html/2610.21244): 92k questions incl. code review, patch correctness, fault localisation, SWE-bench Verified controller. Best decision models ~73% (Decision-2.0-Vega-27B 73.0%, Jev 72.6%) vs fast LLM GPT-6 Luna 71.2% vs Claude Opus 5.5 with reasoning 81.1% (~70x the cost). Small decision models rarely succeed at multi-step tasks.
 - Arize (https://arize.com/blog/decision-model-benchmark/): tool/skill routing, Jev 49/52; RAGTruth hallucination detection, Jev 85.5% balanced accuracy vs OpenAI 81.5%. Rewording flipped several models (Liquid 0.92 -> 0.17); only Jev, Clef and OpenAI stable.
 - Artificial Analysis Decision Index: Jev 58, Microsoft-Decision-1 54; Claude Haiku 5.5 more accurate at much higher cost.
-- Microsoft claim (unverified): "competitive with GPT-5.6 Luna and 100x faster".
+- Microsoft claim (unverified): "competitive with GPT-5.6 Luna and 100x faster". Note: the System1-Arena line above says GPT-6 Luna; which name the original sources use has not been re-checked.
 - No benchmark found specifically for coding decisions with heavy repo context.
 
 ## Large grounding context hurts
@@ -23,5 +23,5 @@ Accuracy drops with irrelevant detail; very literal; weak at counting/maths; ste
 - Filter context in code first; ask several small questions; never hand it a whole repo or diff.
 - Keep a reasoning model for real approve/reject on code, multi-step work, anything needing a written reason.
 - Test exact question wording both ways on labelled data; pin model version before tuning thresholds.
-- Not on GitHub Copilot's model list. Microsoft-Decision-1 is in Foundry (https://learn.microsoft.com/en-us/azure/foundry/foundry-models/how-to/use-foundry-models-microsoft-decision); needs the same Copilot-only policy check.
+- Not on GitHub Copilot's model list. Microsoft-Decision-1 was in Foundry on 27 Oct; as of 18 Nov 2026 the same Learn page (https://learn.microsoft.com/en-us/azure/foundry/foundry-models/how-to/use-foundry-models-microsoft-decision) documents `Microsoft-Decision-1.1` as generally available. The Copilot-only rule is softer than first written (see [README](README.md)), but check policy before using it.
 - Community router on Microsoft-Decision-1 for Copilot: https://notanarchitect.io/one-decision-per-turn-a-minimal-decision-router-for-github-copilot-in-cli-and-vs-code/

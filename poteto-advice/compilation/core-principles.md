@@ -66,7 +66,9 @@ In the live session she adds that brownfield apps at big companies are "in a pre
 >
 > this forms an inverse pyramid: you want most of your effort at the top, least at the bottom. codebase improvements are deterministic, making it more token efficient, and lets you sleep more soundly at night.
 
-The talk version has five steps: codebase, static analysis, rules/Bugbot/skills, then a style guide "which is really only enforceable by humans in a code review". "whenever you find yourself correcting and intervening your agent, um you really want to think about it from these five pieces and where is the most effective step in this sequence".
+**Update (11 Nov 2026):** in her AI Engineer Code Summit talk the pyramid has five layers, with verification as its own layer between static analysis and prose. From cheapest to dearest: codebase, static analysis (lints, types, compilers, tests, CI), verification (formal, runtime), prose (rules, skills, AGENTS.md), human review. Treat the four-item list above as the earlier version. See [All code is slop (except mine)](../2026-11-11-poteto-all-code-is-slop.md).
+
+The earlier talk version has five steps: codebase, static analysis, rules/Bugbot/skills, then a style guide "which is really only enforceable by humans in a code review". "whenever you find yourself correcting and intervening your agent, um you really want to think about it from these five pieces and where is the most effective step in this sequence".
 
 Her `/correct` skill turns this into the order **architecture > types > lint/CI (error names the fix) > behaviour tests > docs last**. See [tooling.md](tooling.md#correct-in-detail).
 

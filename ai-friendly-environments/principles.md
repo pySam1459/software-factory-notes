@@ -11,7 +11,9 @@ poteto, 16 Oct 2026 ([post](https://x.com/poteto/status/2111133080526495985)), o
 
 "this forms an inverse pyramid: you want most of your effort at the top, least at the bottom."
 
-The order used in this guide is architecture > types > lint/CI > tests > prose > human review. pstack's `/correct` skill uses the same ordering: architecture, then types, then a lint whose error names the fix, then a behaviour test, and docs last.
+**Update (11 Nov 2026):** her AI Engineer Code Summit talk splits verification out of static analysis, so the pyramid now has five layers: codebase, static analysis, verification (formal, runtime), prose, human review. The four items above are the 16 Oct version. See [All code is slop (except mine)](../poteto-advice/2026-11-11-poteto-all-code-is-slop.md).
+
+The order used in this guide is architecture > types > lint/CI > tests > verification > prose > human review. pstack's `/correct` skill uses the same ordering: architecture, then types, then a lint whose error names the fix, then a behaviour test, and docs last.
 
 Why it works, in her words from the "How I shipped 2000 PRs" talk: "the code base is really like the best form of memory because agents love to extend existing patterns that they see." The reverse also holds: "if you have existing anti-patterns … these will spread kind of like a virus."
 
