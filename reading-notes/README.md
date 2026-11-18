@@ -2,7 +2,7 @@
 
 Short notes on interesting posts and articles Sam has shared.
 
-Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
+Each file is named `YYYY-MM-DD-slug.md`, using the date of the post. New notes should follow the [note template](../templates/note.md).
 
 Off-topic or time-bound notes have been moved to [archive/](../archive/README.md).
 
