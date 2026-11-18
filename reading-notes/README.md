@@ -4,6 +4,8 @@ Short notes on interesting posts and articles Sam has shared.
 
 Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 
+Off-topic or time-bound notes have been moved to [archive/](../archive/README.md).
+
 ## Index
 
 - [What a software factory actually is (@mardehaym)](2026-11-16-mardehaym-software-factory-10-parts.md): Ten parts under the rule "if code can check it, code does it"; intake is the bottleneck, and the vendor-independence test sits awkwardly against an all-in GHCP stack.
@@ -33,7 +35,6 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 - [KacperRutk: Dr Eggbot plus /grill-me](2026-10-31-kacperrutk-eggbot-grill-me.md): endorses poteto's Dr Eggbot with Matt Pocock's /grill-me skill; grill the bot's job first, then scaffold it.
 - [TiagerBao on Microsoft Agent Framework](2026-10-31-tiagerbao-ms-agent-framework.md): promo for microsoft/agent-framework; the repo is real (checkpoints, human approval, tracing) but a low fit beside GHCP and pstack.
 - [owengretzinger CI 20x](2026-10-31-owengretzinger-ci-20x.md): Boardy's CI speed-up playbook with its claims checked against Blacksmith, Oxlint, bun check and Linear; useful, with a big cost caveat. Includes, as an appendix, @Voxyz_ai's uncredited audit-prompt remix.
-- [reanimate animation skill](2026-10-31-niazmorshed-reanimate.md): MIT Claude skill that clones motion from a URL or recording with frame-compare evidence.
 - [thenowhereway UI sites](2026-10-31-thenowhereway-ui-sites.md): five UI catalogs for vibe coders plus Avara, with factory relevance and top picks.
 - [Elephant-Goldfish Model (EGM)](2026-10-31-elephant-goldfish-model.md): @thisguyknowsai on Google's Apache-2.0 design-before-code plugin with Elephant drafts and fresh-context Goldfish reviewers.
 - [evals-skills by Shreya Shankar and Hamel Husain](2026-10-30-evals-skills.md): Nine open skills for building product-specific LLM evals, how they fit Copilot skills, and which checks belong in Actions.
@@ -41,18 +42,14 @@ Each file is named `YYYY-MM-DD-slug.md`, using the date of the post.
 - [pstack panels and tstack council: multi-agent comparison burns tokens](2026-10-30-pstack-panel-token-cost.md): @cu30rry_ on panels as pstack's main token cost, linked to Theo's tstack council skill and pstack's cost settings.
 - [GitHub Agentic Workflows generally available](2026-10-30-github-agentic-workflows-ga.md): GitHub Next's Markdown agent workflows that compile to Actions reached GA on 28 Oct, with notes on the ADO version for the factory.
 - [Ben Holmes: self-improvement and benchmarking loops for a software factory](2026-10-30-bholmes-factory-two-loops.md): Warp's two factory loops, judging past chats to edit skills and replaying chats across models for cost, plus the open Skill Doctor skill.
-- [kaivectorf: Grok Bot teams promo and the Viktor release-desk article it quotes](2026-10-30-kaivectorf-grokbot-teams-hype.md): Hype post with a Grok Bot Galaxy video; keep the roles, skills and separate approval steps for the GHCP factory, and ignore the unverified salary and throughput claims.
 - [StarSling CI Playbooks](2026-10-30-starsling-ci-playbooks.md): 253 GitHub Actions speed-ups drawn from ten software factories, with an open ci-speedup skill; measure first and run less, rather than buying faster runners.
 - [Maze: codebase slop indicators](2026-10-29-maze-codebase-slop-indicators.md): Maze's checklist of agent-era code smells, mapped to GitHub Copilot reviewer skills, CI and pstack hard constraints.
 - [Ondrej's build, review, ship agent loop](2026-10-29-ondrej-build-review-ship.md): David Ondrej's three-phase agent flowchart (reproduce, independent read-only review, severity filter, re-review, post-merge loops), mapped to GitHub Copilot agents, skills, Automations, Memory and Actions plus pstack.
-- [Pages as project management (not chats)](2026-10-29-pages-as-project-management.md): Fenech's Grok Bot playbook of one Page per project, a master index, bots that read first and update last, and a weekday heartbeat; try one project for 7 days and watch usage.
-- [Code-driven launch videos (Remotion / HyperFrames)](2026-10-29-code-driven-launch-videos.md): how the T3 Tots launch clip was likely made; agents write React or HTML compositions and render them headlessly to MP4; Remotion needs a company licence at 4+ people, HyperFrames is Apache 2.0.
 - [Tw93's 20 AI coding rules](2026-10-29-tw93-ai-coding-rules.md): English version of his Chinese list (plus the blog's 21st harness/Waza rule); keep the verification, risk-tier and writer-not-reviewer bits, skip the cheerleading.
 - [Evals are the most underrated skill](2026-10-29-evals-underrated-skill.md): 14-point eval playbook (error analysis, goldens, deterministic checks, trajectory/pass^k, CI gates); mchulet link is a repost of @divaagurlxw's list.
 - [Harness, Loops, Graphs](2026-10-28-harness-loops-graphs.md): m4lkxx's seven-level ladder from chat to self-improving agent systems, quoted by another repost of poteto's live session; gate on cost of undo, not confidence.
 - [Ban useState, use useReducer](2026-10-28-ban-usestate-usereducer.md): Matt Pocock and hot_town on banning useState so agents take one explicit state path.
 - [A factory with zero reverts](2026-10-28-factory-zero-reverts.md): Tanveer Gill's 453 PRs, 0 reverts, three rules, plus his "software factory from zero" roundup.
-- [Matt Pocock's software factory course](2026-10-28-matt-pocock-factory-course.md): paid course from 9 Nov; the free skills, Sandcastle and articles that cover the same ground.
 - [pstack: plugin vs copied skills](2026-10-28-pstack-plugin-vs-copied-skills.md): Melkey asks poteto why pstack ships as a plugin rather than copyable skills like Theo's tstack; poteto: easier to distribute and update, and the skills are meant to be composed.
 - [poteto (Lauren Tan) workshop: trust, verification and hard constraints](2026-10-28-poteto-agent-team-workshop.md): trust vs number of agents; verification skills so you are not the bottleneck; hard constraints (lint, CI, Dune) beat soft rules.
 - [Bun's CLAUDE.md](2026-10-27-bun-claude-md.md): Bun's CLAUDE.md: agent guide for a huge Rust/C++ codebase, incl. its sharp rules on code comments and proving tests fail before the fix.
