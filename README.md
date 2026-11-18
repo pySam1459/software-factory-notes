@@ -41,6 +41,7 @@ Copy [templates/note.md](templates/note.md). Name the file `YYYY-MM-DD-handle-sl
 
 ### poteto-advice
 
+- [The Rise Of AI Coworkers, Lightcone episode (@poteto)](poteto-advice/2026-11-14-poteto-lightcone-ai-coworkers.md)
 - [All code is slop (except mine) (@poteto)](poteto-advice/2026-11-11-poteto-all-code-is-slop.md)
 - [Find state machines, check their rules, then show the flows (@poteto)](poteto-advice/2026-11-08-poteto-formal-verification-statecharts.md)
 - [Deterministic engineering over "software factory" (@poteto)](poteto-advice/2026-11-06-poteto-deterministic-engineering.md)

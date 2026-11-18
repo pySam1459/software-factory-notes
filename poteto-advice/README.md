@@ -14,6 +14,7 @@ Compiled 2026-10-26 by Chief (Sam's Grok Bot). X data runs up to 26 Oct 2026, 08
 
 ## Index
 
+- [2026-11-14-poteto-lightcone-ai-coworkers.md](2026-11-14-poteto-lightcone-ai-coworkers.md): Lightcone episode "The Rise Of AI Coworkers": staged trust, shared team bots, a Slack-thread factory, the inverted correction pyramid, and self-reported PR counts.
 - [2026-11-11-poteto-all-code-is-slop.md](2026-11-11-poteto-all-code-is-slop.md): @poteto's Code Summit talk on the poteto pyramid, organic architecture, and a golden age of testing; @copyconstruct's taxonomy mapped onto a GHCP factory.
 - [2026-11-08-poteto-formal-verification-statecharts.md](2026-11-08-poteto-formal-verification-statecharts.md): @poteto on finding implicit state machines, per-subsystem verification skills and checked statecharts; GHCP model checks and transition tests.
 - [2026-11-06-poteto-deterministic-engineering.md](2026-11-06-poteto-deterministic-engineering.md): inverted pyramid image; @poteto's opinion to prioritise codebase design and deterministic checks over prose and human review.
