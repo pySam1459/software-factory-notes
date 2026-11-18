@@ -28,8 +28,8 @@ Compiled 2026-10-26 by Chief (Sam's Grok Bot). X data runs up to 26 Oct 2026, 08
 | [compilation/core-principles.md](compilation/core-principles.md) | The trust bottleneck and verification first, the codebase as memory, the inverse pyramid, context not control, stop the bleeding, banning comments and `useEffect`, feature maps, short skills with evals, readiness metrics, plus Minsky's points |
 | [compilation/tooling.md](compilation/tooling.md) | pstack (`/poteto-mode`, `/setup-pstack`, `/correct` in detail, the full skill list), verification skills, Chrome DevTools, Grok Bot and cloud agents |
 | [compilation/applying-at-microsoft.md](compilation/applying-at-microsoft.md) | Mapping it onto GitHub Copilot and ADO: skills, instructions, hooks and `preToolUse`; headless Copilot CLI, the ADO MCP server and pipeline schedules; scoping to the folders Sam owns; the `bots/` thin-layer design and diagram |
-| [compilation/tips-from-posts.md](compilation/tips-from-posts.md) | Tips and prompts from her X posts, 14 Sep to 26 Oct 2026, by theme |
-| [compilation/new-since-2026-10-23.md](compilation/new-since-2026-10-23.md) | What's new between 23 and 26 Oct 2026 |
+| [compilation/tips-from-posts.md](compilation/tips-from-posts.md) | Tips and prompts from her X posts, 14 Sep to 26 Oct 2026, by theme, plus 23 to 28 Oct additions |
+| [compilation/multi-bot-setup.md](compilation/multi-bot-setup.md) | How she structures her Grok Bots (chief of staff, eng lead, engineer bots) and what transfers to Sam's setup |
 
 ### Raw material
 

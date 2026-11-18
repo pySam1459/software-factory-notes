@@ -67,3 +67,71 @@ This collects her practical tips, grouped by theme. Each one is quoted or closel
 - "writing is thinking … being able to clearly express what i want, and knowing the vocabulary i need to be able to direct my agents does seem to make for more effective usage of agents" ([13 Oct](https://x.com/poteto/status/2109885001584292091))
 - Interviews could "collapse into just 2 technical rounds": system design, and "onsite project to build a real thing with agents" ([9 Oct](https://x.com/poteto/status/2108689504811012135))
 - **Product**: "deleting the product" ([3 Oct](https://x.com/poteto/status/2106202416853262408)). Features are rarely removed when individuals own OKRs: "users will notice that you ship your org chart".
+
+## 23 to 28 Oct additions
+
+Merged from the former `new-since-2026-10-23.md` on 18 Nov 2026 (the Grok Bot product-news section was dropped as off-topic).
+
+This covers poteto's posts and replies from 23 Oct up to 26 Oct 08:25 UK time, when they were fetched. Times are UK time (BST until 25 Oct 02:00, then GMT). The full text of each post is in [`../raw/x-posts/new-since-2026-10-23.md`](../raw/x-posts/new-since-2026-10-23.md). That file uses UTC and starts at 23 Oct 00:00 UTC, which is 01:00 BST.
+
+**Volume:** about 100 posts. 87 are replies, mostly Grok Bot support, feedback routing ("@bot send to the feedback-pages slack") and banter. The engineering content is below.
+
+
+### 1. Ron Minsky's talk is worth watching, and expect tests in particular (26 Oct)
+
+- **07:54 GMT** ([post](https://x.com/poteto/status/2114626630429913383)): "so many gems and great tips in this talk from @yminsky about how to improve your codebase for agents".
+  - "agents thrive on feedback, and types are one of the best kinds"
+  - "make illegal states unrepresentable with types, and it enforces global rules across your codebase"
+  - "property based tests, fuzzing, and even full-system deterministic simulation testing"
+  - "expect tests: just print stuff out and capture it in the test. makes behavior legible. it's very similar to how compilers have fixture tests, it reduces the review surface area"
+  - "formal methods used to be very expensive … but agents change the roi"
+- **08:08 GMT** ([reply](https://x.com/poteto/status/2114630175040348590)): "here's one example of expect tests, we used these rigorously for react compiler". The link is the compiler's fixture folder: <https://github.com/react/react/tree/main/compiler/packages/babel-plugin-react-compiler/src/__tests__/fixtures/compiler>.
+- **07:26 GMT** ([reply](https://x.com/poteto/status/2114619779080237331)): she quotes "It's about how much you can constrain the environment toward the right behavior when you have a large, heterogeneous mix of collaborators" and adds "right, exactly!". This is the same idea as "big company problems are now everyone's problems".
+- The talk transcript is in `raw/transcripts/ron-minsky-jane-street-reliable-software-age-of-agents.txt`.
+
+**[Chief]**: for Sam's React/TS area, this means:
+
+- inline snapshot tests (`toMatchInlineSnapshot`) of reducer output and rendered trees
+- stricter types in the folders he owns
+- a check that agents don't delete or skip tests
+
+See [applying-at-microsoft.md §7](applying-at-microsoft.md#7-ideas-from-ron-minskys-talk-applied-chief) and `ai-friendly-environments/tests.md`.
+
+### 2. Languages for agents and formal verification (23 and 26 Oct)
+
+- **23 Oct 02:20 BST** ([reply](https://x.com/poteto/status/2113440410442072232)): "very hard problem but hopefully we will see more innovation in formal verification (+ keeping code/spec in sync, ideally in same lang like @bendlang)".
+- **26 Oct 06:43 GMT** ([quote](https://x.com/poteto/status/2114608724312752550)): quoting @mattpocockuk, who wrote that the next "language for agents" should be "As fast as Rust", have "As little design space as Go" and "Have the strictest type/verification system ever written". Her comment: "i am really excited to see all the innovation that's going to happen with programming languages in the next few years".
+- **26 Oct 06:53 GMT** ([reply](https://x.com/poteto/status/2114611298222875042)): someone asked whether new languages are needed at all. Her prediction is yes: "there are decades of research into compiler backends like llvm, gcc, cranelift, etc that i don't think will just go away … i could certainly see new system languages with interesting properties and less high level semantics being more popular since agents make writing such code less painful".
+- **26 Oct 07:02 GMT** ([reply](https://x.com/poteto/status/2114613597515190666)): "i think we're still really early … i think Bend is very promising … in terms of production readiness i think the closest thing you might have for a strict and somewhat verifiable language for agents is rust + something like verus, but that's also not complete".
+- **26 Oct 07:28 GMT** ([reply](https://x.com/poteto/status/2114620076494311796)): "the Jane Street folks are doing interesting things with OxCaml and were also interested in formal verification".
+- **pstack**: the statechart skill she announced on 22 Oct ("will release soon") is now in pstack as `/statechart`. The repo commit is "bring the statechart skill up to date, with the Pele renderer", dated 23 Oct 20:37 BST. It turns a TLA+ model into a Mermaid statechart where each bug is a numbered path, and can also go from an agreed chart to a TLA+ skeleton. See [tooling.md](tooling.md#formal-verification-and-statecharts).
+
+### 3. Skills keep shrinking, and guidance should be balanced (24 Oct)
+
+- **21:58 BST** ([reply](https://x.com/poteto/status/2114099131845423142)): "i am constantly updating and simplifying pstack. the more capable models get, the less instructions they need. over time i expect the skills to shrink more and more, until they're basically just saved prompts".
+- **21:42 BST** ([quote](https://x.com/poteto/status/2114095305910280363)): "wrote about this in my pstack guide!", quoting @rauchg:
+
+  > There'll be times where you over-guide the AI. It knows better than you and is more intelligent than you.
+  >
+  > There'll be times where you under-guide the AI. It can go off-track, have the wrong biases, or miss context.
+
+  The guide is at <https://x.com/poteto/article/2097732320606507506>.
+
+### 4. Bots as teammates, and keeping costs down (23–24 Oct)
+
+- **24 Oct 20:07 BST** ([post](https://x.com/poteto/status/2114071326411690209)): "one of my favorite things to do is to have our bots collaborate with each other! just add your bots to slack and work alongside them like teammates".
+- **23 Oct 04:57 BST** ([reply](https://x.com/poteto/status/2113479806952276140)), on bot usage costs: "ask your bot to check for expensive routines, reduce bot 2 bot messages. usually its the routines though that add up quickly". **[Chief]**: this matters for Sam's `bots/` design. The router should dedupe triggers, and routines should be cheap by default.
+- **24 Oct 02:20 BST** ([reply](https://x.com/poteto/status/2113802710248288641)): "i love projects so much! i'm up to 27 right now". That's up from 16 parallel Projects on 10 Oct.
+- She routes feedback and bugs by tagging her bot in replies: "@bot repro and fix this in my X Feedback project" ([25 Oct](https://x.com/poteto/status/2114402021461860430)), and "@bot send this to my silicon project to review" ([25 Oct](https://x.com/poteto/status/2114141783735329119)). This is the same "first mile → last mile" loop.
+
+### 5. Code vs spreadsheets (26 Oct, minor)
+
+- **06:10 GMT** ([reply](https://x.com/poteto/status/2114600632703459740)): "i think excel is interesting because you see the data and the functions are hidden, while in coding you see the functions but the data is hidden". This connects to expect tests, which make the data visible.
+
+### 6. Points from the live-session repost not captured before (28 Oct)
+
+@akarixbt reposted her hour-long live session ([post](https://x.com/akarixbt/status/2114389035388989873)) with hype she doesn't say ("50+ agents", "97% of engineers", "$750K offers"). Most of it is already in [core-principles.md](core-principles.md). New here:
+
+- **"Benny", a bug-repro cloud agent.** It picks up bug reports, spins up its own cloud desktop running the app, reproduces the bug with her control skills (or confirms it's already fixed on `main`), and attaches a screen recording.
+- **Non-engineers ship code.** PMs use Grok Bot to summarise what engineers landed overnight. PMs and designers fix bugs through it and she just "stamps" the PR. She treats this as proof the hard constraints work: they let non-experts contribute safely.
+- **Cost framed as ROI.** She admits she has unlimited tokens at an AI lab, but argues the upfront token cost of refactoring towards hard constraints is cheaper than a "10,000 person engineering org" and its planning overhead. The goal is a codebase where "the most naive, dumbest" agents succeed. She also cites the 600+ PRs it took to move Grok Bot onto Dune.

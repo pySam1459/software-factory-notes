@@ -126,7 +126,7 @@ For Electron you can attach to `--remote-debugging-port`.
 - **Statecharts** ([21 Oct](https://x.com/poteto/status/2112736749281759566), [22 Oct](https://x.com/poteto/status/2113398433977659654)): render TLA+ models as statecharts a PM or reviewer can read. Built with Pele by @kepano. The 22 Oct posts described the released skill (`/statechart`) as working both ways (`from-spec`, TLA+ to chart, and `from-chart`, an agreed chart to a TLA+ skeleton).
 
   **Update (8 Nov 2026):** the current SKILL.md does not promise the chart-to-spec direction. It writes a TLA+ spec and config, runs TLC, and produces `report.md`, a Mermaid `chart.mmd` and TLC logs; it checks stated rules and reports counterexample paths. First use installs Java and TLC through mise. See [Find state machines, check their rules, then show the flows](../2026-11-08-poteto-formal-verification-statecharts.md).
-- Long term, she is betting on languages where proofs live with the code (Bend; Rust + Verus). See [new-since-2026-10-23.md](new-since-2026-10-23.md).
+- Long term, she is betting on languages where proofs live with the code (Bend; Rust + Verus). See [tips-from-posts.md](tips-from-posts.md#23-to-28-oct-additions).
 
 ## Evals for skills
 

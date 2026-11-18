@@ -39,6 +39,12 @@ https://github.com/githubnext/ado-aw — Azure DevOps Agentic Workflows. Same Ma
 
 For the Copilot-only MSFT factory: AW GA is the first-party way to run Copilot (or another engine) on recurring repo chores under Actions policy. Start with read-only / report-only workflows (repo-status, CI Doctor), then graduate to PR-opening improvers once SafeOutputs + threat detection are understood. On ADO, evaluate ado-aw before forcing everything onto github.com Actions.
 
+## Traits in CI (from the earlier 28 Oct note)
+First seen via [@GHchangelog, 28 Oct 2026](https://x.com/GHchangelog/status/2115477605365252488); this note replaces the separate 28 Oct note.
+- Natural fit: a PR-triggered Markdown workflow that reads `.agents/traits/*.md` and reviews the diff against them, posting comments via safe outputs (see [traits](../ai-friendly-environments/traits.md)).
+- An LLM trait check is a soft check. Use it for what lint can't express, and have it propose a lint rule when the same trait keeps being broken, so soft rules graduate to hard ones.
+- The 28 Oct note said this was GitHub Actions only, not Azure DevOps; the ADO angle above (ado-aw) supersedes that.
+
 ## Caveats
 - X post is a pointer; claims and GA feature list come from the 28 Oct changelog and gh-aw quickstart / agentics README opened this turn.
 - Accenture metrics are testimonial.
