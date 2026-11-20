@@ -129,6 +129,7 @@ Raw sources: [transcripts](poteto-advice/raw/transcripts/README.md), [X posts](p
 
 #### Platform, always-on agents and tools
 
+- [Programmatic tool calling is a layer on MCP, not a replacement](reading-notes/2026-11-20-programmatic-tool-calling.md)
 - [Always-on agents sleep between short runs (@TekonBurns)](reading-notes/2026-11-13-TekonBurns-always-on-agents.md)
 - [One account per agent, and what that does not fix (@berman66)](reading-notes/2026-11-11-berman66-agent-identity.md)
 - [MCP or CLI? Yes. (@zeeg)](reading-notes/2026-11-10-zeeg-mcp-or-cli.md)

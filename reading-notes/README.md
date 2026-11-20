@@ -8,6 +8,7 @@ Off-topic or time-bound notes have been moved to [archive/](../archive/README.md
 
 ## Index
 
+- [Programmatic tool calling is a layer on MCP, not a replacement](2026-11-20-programmatic-tool-calling.md): Cloudflare Code Mode and Anthropic's programmatic tool calling still sit on MCP servers; the token cuts are self-reported, and classic tool calls remain better for short, sequential work.
 - [What a software factory actually is (@mardehaym)](2026-11-16-mardehaym-software-factory-10-parts.md): Ten parts under the rule "if code can check it, code does it"; intake is the bottleneck, and the vendor-independence test sits awkwardly against an all-in GHCP stack.
 - [A prompt to get CI under two minutes (@pontusab)](2026-11-15-pontusab-ci-under-2-minutes.md): A reusable agent prompt (p50 under 2 min, full suite in the merge queue) after a self-reported frontend CI win; the checklist matches the earlier Boardy playbook, and he did not publish a cold-cache number.
 - [Make agents complain about the codebase (@kentcdodds)](2026-11-15-kentcdodds-agents-complain.md): Ask agents, at the end of a task, what slowed them down; his autopilot video (122 PRs in 24 hours, self-reported) files that friction after merge, and the useful replies are to mine silent retries, count repeats, and route fixes to skills rather than notes.
